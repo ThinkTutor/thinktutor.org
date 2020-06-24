@@ -677,6 +677,8 @@ features
 .feature-item .left-icon img {
   float: left;
   margin-right: 30px;
+  background-color: #00B4FF;
+  border-radius: 5%;
 }
 
 .feature-item .right-content {
