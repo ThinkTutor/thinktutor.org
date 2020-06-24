@@ -676,9 +676,10 @@ features
 
 .feature-item .left-icon img {
   float: left;
-  margin-right: 30px;
+  margin-right: 20px;
   background-color: #00B4FF;
   border-radius: 5%;
+  padding: 10px;
 }
 
 .feature-item .right-content {
@@ -712,7 +713,7 @@ subscribe
 
 #call-to-action {
   padding: 120px 0px;
-  background-image: url(../images/cta-bg.jpg);
+  background-image: url(https://res.cloudinary.com/dsimenzvu/image/upload/c_scale,b_black,o_25,q_auto,fl_lossy,f_auto,w_1600/writing-1149962_l20hmw.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1012,7 +1013,7 @@ contact
 
 #contact-us .contact-form {
   padding: 80px;
-  background-image: url(../images/contact-bg.jpg);
+  background-image: url(https://res.cloudinary.com/dsimenzvu/image/upload/c_scale,b_black,o_25,q_auto,fl_lossy,f_auto,w_800/book-856151_lci89a.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1248,4 +1249,10 @@ responsive
   .feature-item .right-content a.text-button {
     margin-left: 130px;
   }
+}
+
+/* Hackish fix */
+
+div#setmore-fancy-box-content {
+    height: 70vh !important;
 }
