@@ -718,7 +718,7 @@ subscribe
 }
 
 .cta-content h2 {
-  font-size: 36px;
+  font-size: 55px;
   text-transform: uppercase;
   font-weight: 800;
   color: #fff;
@@ -731,9 +731,9 @@ subscribe
 }
 
 .cta-content p {
-  font-size: 16px;
+  font-size: 25px;
   color: #fff;
-  margin: 15px 0px 25px 0px;
+  margin: 40px 0px 55px 0px;
 }
 
 
