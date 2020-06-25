@@ -28,7 +28,7 @@ Table of contents
 font & reset css
 --------------------------------------------- 
 */
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 /* 
 ---------------------------------------------
 reset
@@ -80,7 +80,7 @@ header, nav, section, article, aside, footer, hgroup {
 }
 
 html, body {
-  font-family: 'Poppins', sans-serif;
+  font-family: $main-font;
   font-weight: 400;
   background-color: #fff;
   font-size: 16px;
@@ -105,7 +105,7 @@ ul {
 p {
   font-size: 14px;
   line-height: 25px;
-  color: #7a7a7a;
+  color: $text-light;
 }
 
 /* 
@@ -116,20 +116,20 @@ global styles
 html,
 body {
   background: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: $main-font;
 }
 
 ::selection {
-  background: #ed563b;
+  background: $highlight-color;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #ed563b;
+  background: $highlight-color;
   color: #fff;
 }
 
-@media (max-width: 991px) {
+@media (max-width: $lgtabletwidth) {
   html, body {
     overflow-x: hidden;
   }
@@ -154,7 +154,7 @@ body {
 .section-heading h2 {
   font-size: 28px;
   font-weight: 800;
-  color: #232d39;
+  color: $text-dark;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: 0px;
@@ -163,7 +163,7 @@ body {
 
 .section-heading h2 em {
   font-style: normal;
-  color: #00B4FF;
+  color: $main-color;
 }
 
 .section-heading img {
@@ -182,7 +182,7 @@ body {
   display: inline-block;
   font-size: 15px;
   padding: 12px 20px;
-  background-color: #ed563b;
+  background-color: $main-color;
   color: #fff;
   text-align: center;
   font-weight: 400;
@@ -191,7 +191,7 @@ body {
 }
 
 .main-button a:hover {
-  background-color: #00B4FF;
+  background-color: $hover-color;
 }
 
 
@@ -213,23 +213,23 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #232d39!important;
+  color: $text-dark;
 }
 
 .background-header .main-nav .nav li:last-child a {
-  color: #fff !important;
+  color: #fff;
 }
 
 .background-header .main-nav .nav li:last-child a:hover {
-  color: #fff!important;
+  color: #fff;
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #00B4FF!important;
+  color: $hover-color;
 }
 
 .background-header .nav li a.active {
-  color: #00B4FF!important;
+  color: $main-color;
 }
 
 .header-area {
@@ -244,6 +244,9 @@ header
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
+  & a {
+    color: #fff;
+  }
 }
 
 .header-area .main-nav {
@@ -253,7 +256,6 @@ header
 
 .header-area .main-nav .logo {
   line-height: 80px;
-  color: #fff;
   font-size: 32px;
   font-weight: 800;
   text-transform: uppercase;
@@ -266,7 +268,7 @@ header
 
 .header-area .main-nav .logo em {
   font-style: normal;
-  color: #00B4FF;
+  color: $main-color;
   font-weight: 900;
 }
 
@@ -292,7 +294,6 @@ header
   display: block;
   font-weight: 500;
   font-size: 13px;
-  color: #7a7a7a;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -304,16 +305,12 @@ header
   letter-spacing: 1px;
 }
 
-.header-area .main-nav .nav li a {
-  color: #fff;
-}
-
 .header-area .main-nav .nav li:last-child a {
   display: inline-block;
   font-size: 13px;
   padding: 11px 17px;
-  background-color: #00B4FF;
-  color: #fff;
+  background-color: $main-color;
+  color: #fff !important;
   text-align: center;
   font-weight: 400;
   letter-spacing: 0px;
@@ -324,19 +321,20 @@ header
 }
 
 .header-area .main-nav .nav li:last-child a:hover {
-  background-color: #00B4FF;
+  color: #fff !important;
+  background-color: $hover-color;
   opacity: 1;
 }
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #00B4FF!important;
+  color: $main-color;
   opacity: 1;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #00B4FF!important;
+  color: $main-color;
   opacity: 1;
 }
 
@@ -460,10 +458,10 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #ed563b;
+  color: $highlight-color;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: $lgdesktodwidth) {
   .header-area .main-nav .nav li {
     padding-left: 12px;
     padding-right: 12px;
@@ -473,13 +471,13 @@ header
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mdtabletwidth) {
   .header-area .main-nav .logo {
     color: #1e1e1e;
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #00B4FF!important;
+    color: $main-color !important;
     opacity: 1;
   }
   .header-area {
@@ -516,15 +514,15 @@ header
   }
   .header-area .main-nav .nav li:last-child {
     width: 100%;
-    background-color: #00B4FF;
+    background-color: $main-color;
     color: #fff;
   }
   .header-area .main-nav .nav li:last-child a {
-    background-color: #00B4FF!important;
+    background-color: $main-color!important;
   }
   .header-area .main-nav .nav li:last-child a:hover,
   .header-area .main-nav .nav li:last-child:hover a {
-    background-color: #00B4FF!important;
+    background-color: $main-color!important;
     color: #fff!important;
   }
   .header-area.header-sticky .nav {
@@ -543,14 +541,14 @@ header
     padding: 0px !important;
     border: none !important;
     background: #f7f7f7 !important;
-    color: #232d39 !important;
+    color: $text-dark !important;
   }
   .header-area .main-nav .nav li:last-child a {
     color: #fff!important;
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #ed563b!important;
+    color: $hover-color !important;
   }
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
@@ -585,7 +583,7 @@ header
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: $mdtabletwidth) {
   .header-area .main-nav .nav {
     display: flex !important;
   }
@@ -654,7 +652,7 @@ banner
 
 .main-banner .caption h2 em {
   font-style: normal;
-  color: #00B4FF;
+  color: $main-color;
   font-weight: 900;
 }
 
@@ -677,7 +675,7 @@ features
 .feature-item .left-icon img {
   float: left;
   margin-right: 20px;
-  background-color: #00B4FF;
+  background-color: $main-color;
   border-radius: 5%;
   padding: 10px;
 }
@@ -690,7 +688,7 @@ features
   margin-top: 0px;
   margin-bottom:  7px;
   letter-spacing: 0.25px;
-  color: #232d39;
+  color: $text-dark;
   font-size: 19px;
   font-weight: 600;
   text-transform: capitalize;
@@ -701,7 +699,7 @@ features
   display: inline-block;
   font-size: 13px;
   text-transform: uppercase;
-  color: #ed563b;
+  color: $highlight-color;
   font-weight: 500;
 }
 
@@ -730,7 +728,7 @@ subscribe
 
 .cta-content h2 em {
   font-style: normal;
-  color: #00B4FF;
+  color: $main-color;
 }
 
 .cta-content p {
@@ -772,7 +770,7 @@ Our Classes
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   border-radius: 5px;
   font-size: 19px;
-  color: #232d39;
+  color: $text-dark;
   letter-spacing: 0.5px;
   font-weight: 600;
   transition: all 0.3s;
@@ -788,10 +786,10 @@ Our Classes
   font-size: 19px;
   letter-spacing: 0.5px;
   font-weight: 600;
-  background-color: #00B4FF;
+  background-color: $main-color;
 }
 #tabs .main-rounded-button a:hover {
-  background-color: #f9735b;
+  background-color: $hover-color;
 }
 #tabs ul li a img {
   max-width: 100%;
@@ -804,7 +802,7 @@ Our Classes
   border-bottom: none;
 }
 #tabs ul .ui-tabs-active a {
-  color: #00B4FF;
+  color: $main-color;
 }
 #tabs ul .ui-tabs-active span {
   color: #1e1e1e;
@@ -823,14 +821,14 @@ Our Classes
 .tabs-content h4 {
   font-size: 23px;
   font-weight: 700;
-  color: #232d39;
+  color: $text-dark;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
   margin-top: 30px;
 }
 .tabs-content p {
   font-size: 14px;
-  color: #7a7a7a;
+  color: $text-light;
   margin-bottom: 28px;
 }
 
@@ -922,7 +920,7 @@ schedule
 }
 #schedule .filters ul li.active,
 #schedule .filters ul li:hover {
-  color: #00B4FF;
+  color: $hover-color;
 }
 #schedule .filters-content {
   margin-top: 50px;
@@ -960,7 +958,7 @@ trainers
 #trainers .trainer-item span {
   font-size: 13px;
   font-weight: 500;
-  color: #ed563b;
+  color: $highlight-color;
   display: inline-block;
   margin-top: 25px;
   margin-bottom: 10px;
@@ -969,7 +967,7 @@ trainers
 #trainers .trainer-item h4 {
   font-size: 19px;
   font-weight: 600;
-  color: #232d39;
+  color: $text-dark;
   letter-spacing: 0.5px;
   margin-bottom: 18px;
 }
@@ -988,12 +986,12 @@ trainers
 }
 
 #trainers .trainer-item ul.social-icons li a {
-  color: #232d39;
+  color: $text-dark;
   transition: all .3s;
 }
 
 #trainers .trainer-item ul.social-icons li a:hover {
-  color: #00B4FF;
+  color: $hover-color;
 }
 
 
@@ -1027,7 +1025,7 @@ contact
 
 .contact-form input,
 .contact-form textarea {
-  color: #7a7a7a;
+  color: $text-light;
   font-size: 13px;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -1048,22 +1046,22 @@ contact
 }
 
 .contact-form ::-webkit-input-placeholder { /* Edge */
-  color: #7a7a7a;
+  color: $text-light;
 }
 
 .contact-form :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #7a7a7a;
+  color: $text-light;
 }
 
 .contact-form ::placeholder {
-  color: #7a7a7a;
+  color: $text-light;
 }
 
 .contact-form button {
   display: inline-block;
   font-size: 13px;
   padding: 11px 17px;
-  background-color: #ed563b;
+  background-color: $main-color;
   color: #fff;
   text-align: center;
   font-weight: 400;
@@ -1075,7 +1073,7 @@ contact
 }
 
 .contact-form button:hover {
-  background-color: #f9735b;
+  background-color: $hover-color;
 }
 
 
@@ -1092,17 +1090,17 @@ footer {
 }
 
 footer p {
-  color: #232d39;
+  color: $text-dark;
   font-size: 13px;
 }
 
 footer p a {
   cursor: pointer;
-  color: #00B4FF;
+  color: $main-color;
 }
 
 footer p a:hover {
-  color: #00B4FF;
+  color: $hover-color;
 }
 
 
@@ -1119,7 +1117,7 @@ preloader
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #232d39;
+    background-color: $text-dark;
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -1171,7 +1169,7 @@ preloader
     position: relative;
     width: 142px;
     height: 40px;
-    background: #232d39;
+    background: $text-dark;
 }
 
 .preloader-inner .dot {
@@ -1215,7 +1213,7 @@ responsive
 */
 
 
-@media (max-width: 992px) {
+@media (max-width: $lgtabletwidth) {
 
   .main-banner .caption h2 {
     font-size: 64px;
@@ -1245,14 +1243,8 @@ responsive
 
 }
 
-@media (max-width: 450px) {
+@media (max-width: $phonewidth) {
   .feature-item .right-content a.text-button {
     margin-left: 130px;
   }
-}
-
-/* Hackish fix */
-
-div#setmore-fancy-box-content {
-    height: 70vh !important;
 }
