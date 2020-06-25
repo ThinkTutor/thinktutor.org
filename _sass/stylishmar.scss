@@ -25,12 +25,6 @@ Table of contents
 --------------------------------------------- */
 /* 
 ---------------------------------------------
-font & reset css
---------------------------------------------- 
-*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
-/* 
----------------------------------------------
 reset
 --------------------------------------------- 
 */
@@ -740,6 +734,7 @@ subscribe
   font-size: 25px;
   color: #fff;
   margin: 40px 0px 55px 0px;
+  line-height: normal;
 }
 
 
@@ -944,23 +939,23 @@ schedule
 
 /* 
 ---------------------------------------------
-trainers
+about
 --------------------------------------------- 
 */
 
-#trainers .trainer-item {
+#about .trainer-item {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   padding: 40px;
 }
 
-#trainers .trainer-item img {
+#about .trainer-item img {
   width: 100%;
   border-radius: 5px;
 }
 
-#trainers .trainer-item span {
+#about .trainer-item span {
   font-size: 13px;
   font-weight: 500;
   color: $highlight-color;
@@ -969,7 +964,7 @@ trainers
   margin-bottom: 10px;
 }
 
-#trainers .trainer-item h4 {
+#about .trainer-item h4 {
   font-size: 19px;
   font-weight: 600;
   color: $text-dark;
@@ -977,25 +972,25 @@ trainers
   margin-bottom: 18px;
 }
 
-#trainers .trainer-item p {
+#about .trainer-item p {
   margin-bottom: 20px;
 }
 
-#trainers .trainer-item ul.social-icons li {
+#about .trainer-item ul.social-icons li {
   display: inline-block;
   margin-right: 12px;
 }
 
-#trainers .trainer-item ul.social-icons li:last-child {
+#about .trainer-item ul.social-icons li:last-child {
   margin-right: 0px;
 }
 
-#trainers .trainer-item ul.social-icons li a {
+#about .trainer-item ul.social-icons li a {
   color: $text-dark;
   transition: all .3s;
 }
 
-#trainers .trainer-item ul.social-icons li a:hover {
+#about .trainer-item ul.social-icons li a:hover {
   color: $hover-color;
 }
 
