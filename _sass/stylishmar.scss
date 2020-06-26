@@ -986,6 +986,14 @@ about
   color: $hover-color;
 }
 
+#about .tutor-item ul.social-icons li svg {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	fill: currentColor;
+	vertical-align: text-bottom;
+}
+
 
 /* 
 ---------------------------------------------

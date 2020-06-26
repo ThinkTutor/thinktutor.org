@@ -32,9 +32,9 @@
 
 	function onScroll(event) {
 		var scrollPos = $(document).scrollTop();
-		$('.nav a').each(function () {
+		$('.nav a').slice(0,-1).each(function () {
 			var currLink = $(this);
-			var refElement = $(currLink.attr("href"));
+			var refElement = $(currLink.attr("href").split("/").pop());
 			if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
 				$('.nav ul li a').removeClass("active");
 				currLink.addClass("active");

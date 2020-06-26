@@ -1,0 +1,28 @@
+- name: "Maria Fernanda Petri Betto"
+  image: "assets/images/tutors/mar.jpg"
+  title: "Economics PhD Student, Northwestern University"
+  bio: >-
+    With 14+ years of teaching experience and an exceptional quantitative background, Maria's successful track record as an instructor comes as no surprise. She tutors in almost all areas of Economics, Mathematics, Statistics and Programming.
+  social:
+    linkedin: "mariabetto"
+    github: "mariabetto"
+    email: "mar@mfpb.me"
+
+- name: "Matthew Thomas"
+  image: "assets/images/tutors/mwt.png"
+  title: "Economics PhD Student, Northwestern University"
+  bio: >-
+    Formerly a Math/Econ major at Williams college and now an Economics PhD student at Northwestern University, Matthew's quantitative skills and passion for teaching are unparalleled. He tutors in almost all areas of Economics, Mathematics, Statistics and Programming.
+  social:
+    linkedin: "mattwthomas"
+    github: "mattwthomas"
+    email: "matthew@mwt.me"
+
+- name: "Someone Else"
+  title: "Something at Somewhere"
+  bio: >-
+    A person who knows things.
+  social:
+    twitter: ""
+  
+

@@ -95,66 +95,42 @@ layout: home
             </div>
         </div>
         <div class="row">
+            {%- for tutor in site.data.tutors -%}
             <div class="col-lg-4">
                 <div class="tutor-item">
                     <div class="image-thumb">
-                        <img src="assets/images/mar-sm.jpg" alt="">
+                        <img src="
+                        {%- if tutor.image -%}
+                        {{ tutor.image | relative_url }}
+                        {%- else -%}
+                        {{ 'assets/images/tutors/unknown.svg' | relative_url }}
+                        {%- endif -%}
+                        " alt="Picture of {{ tutor.name }}">
                     </div>
                     <div class="down-content">
-                        <span>Economics PhD Student, Northwestern University</span>
-                        <h4>Maria Betto</h4>
-                        <p>With 14+ years of teaching experience and an exceptional quantitative background, Maria's
-                            successful track record as an instructor comes as no surprise. She tutors in almost all
-                            areas of Economics, Mathematics, Statistics and Programming. </p>
+                        <span>{{ tutor.title }}</span>
+                        <h4>{{ tutor.name }}</h4>
+                        <p>{{ tutor.bio }}</p>
+                        {%- if tutor.social -%}
                         <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            {%- if tutor.social.linkedin -%}
+                            <li><a href="{{ tutor.social.linkedin | cgi_escape | escape | prepend: 'https://www.linkedin.com/in/' }}" title="{{ tutor.social.linkedin | escape }}" target="_blank"><svg><use xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg></a></li>
+                            {%- endif -%}
+                            {%- if tutor.social.twitter -%}
+                            <li><a href="{{ tutor.social.twitter | cgi_escape | escape | prepend: 'https://twitter.com/' }}" title="{{ tutor.social.twitter | escape }}" target="_blank"><svg><use xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#twitter' | relative_url }}"></use></svg></a></li>
+                            {%- endif -%}
+                            {%- if tutor.social.github -%}
+                            <li><a href="{{ tutor.social.github | cgi_escape | escape | prepend: 'https://github.com/' }}" title="{{ tutor.social.github | escape }}" target="_blank"><svg><use xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#github' | relative_url }}"></use></svg></a></li>
+                            {%- endif -%}
+                            {%- if tutor.social.email -%}
+                            <li><a href="{{ tutor.social.linkedin | cgi_escape | escape | prepend: 'mailto:' }}" title="{{ tutor.social.email | escape }}"><svg><use xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#email' | relative_url }}"></use></svg></a></li>
+                            {%- endif -%}
                         </ul>
+                        {%- endif -%}
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="tutor-item">
-                    <div class="image-thumb">
-                        <img src="assets/images/second-tutor.jpg" alt="">
-                    </div>
-                    <div class="down-content">
-                        <span>Economics PhD Student, Northwestern University</span>
-                        <h4>Matthew Thomas</h4>
-                        <p>Formerly a Math/Econ major at Williams college and now an Economics PhD student at
-                            Northwestern University, Matthew's quantitative skills and passion for teaching are
-                            unparalleled. He tutors in almost all areas of Economics, Mathematics, Statistics and
-                            Programming. </p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="tutor-item">
-                    <div class="image-thumb">
-                        <img src="assets/images/third-tutor.jpg" alt="">
-                    </div>
-                    <div class="down-content">
-                        <span>Power tutor</span>
-                        <h4>Paul D. Newman</h4>
-                        <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan
-                            church-key pour-over seitan flannel.</p>
-                        <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            {%- endfor -%}
         </div>
     </div>
 </section>
