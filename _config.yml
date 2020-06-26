@@ -18,7 +18,7 @@ title: Think Tutor
 description: >- # this means to ignore newlines until "baseurl:"
   Tutoring that Works
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "thinktutor.org" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
@@ -39,6 +39,8 @@ plugins:
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
