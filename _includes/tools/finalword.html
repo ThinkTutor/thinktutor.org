@@ -1,0 +1,8 @@
+{%- assign titlelist = include.content | split: " " -%}
+{%- for word in titlelist -%}
+    {%- if forloop.last -%}
+        <em>{{ word }}</em>
+    {%- else -%}
+        {{ word | append: ' ' }} 
+    {%- endif -%}
+{%- endfor -%}

@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <title>Think Tutor - Tutoring Service</title>
+    <title>{{ site.title }} - Tutoring Service</title>
 <!--
 
 TemplateMo 548 Training Studio
@@ -37,7 +39,9 @@ https://templatemo.com/tm-548-training-studio
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">Think<em> Tutor</em></a>
+                        <a href="index.html" class="logo">
+                            {% include tools/finalword.html content=site.title %}
+                        </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
@@ -45,7 +49,9 @@ https://templatemo.com/tm-548-training-studio
                             <li class="scroll-to-section"><a href="#features"> Subjects</a></li>
                             <li class="scroll-to-section"><a href="#about">About</a></li>
                             <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
-                            <li class="main-button"><a id="Setmore_button_iframe" style="float:none" href="https://my.setmore.com/bookingpage/5ba69a07-8e22-4e64-8c44-e269aa132813">Request Tutoring</a></li>
+                            <li class="main-button">
+                                {%- include setmore/button.html -%}
+                            </li>
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -67,9 +73,11 @@ https://templatemo.com/tm-548-training-studio
         <div class="video-overlay header-text">
             <div class="caption">
                 <h6>reach your academic goals</h6>
-                <h2>Tutoring that <em>works</em></h2>
+                <h2>
+                    {%- include tools/finalword.html content=site.description -%}
+                </h2>
                 <div class="main-button scroll-to-section">
-                    <a id="Setmore_button_iframe" style="float:none" href="https://my.setmore.com/bookingpage/5ba69a07-8e22-4e64-8c44-e269aa132813">Request Tutoring</a>
+                    {%- include setmore/button.html -%}
                 </div>
             </div>
         </div>
@@ -87,72 +95,28 @@ https://templatemo.com/tm-548-training-studio
                         <p>Need Math, Statistics or Economics assistance? Our tutors can help. From high school to advanced degree programs, we will give you the power to succeed in your learning goals.</p>
                     </div>
                 </div>
+                <!-- assign cutoff for two column layout -->
+                {%- assign cutoff = site.subjects.size | divided_by: 2.0 | ceil -%}
                 <div class="col-lg-6">
                     <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/icons/math.svg" width="100px" height="100px" alt="Mathematics">
-                            </div>
-                            <div class="right-content">
-                                <h4>Mathematics</h4>
-                                <p>Our advanced tutors have you covered whether you need help with introductory geometry or graduate-level complex analysis.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/icons/stat.svg" width="100px" height="100px" alt="Statistics">
-                            </div>
-                            <div class="right-content">
-                                <h4>Statistics</h4>
-                                <p>We have top experts in both data science and theoretical statistics on hand. We can help with schoolwork, theses, and other projects.
-                                </p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/icons/econ.svg" width="100px" height="100px" alt="Economics">
-                            </div>
-                            <div class="right-content">
-                                <h4>Economics</h4>
-                                <p>We are the only tutoring program with top graduate Economists on staff. If you're taking an Economics course, we have taught it.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
+                {%- for subject in site.subjects -%}
+                {%- if forloop.index0 == cutoff -%}
                     </ul>
                 </div>
                 <div class="col-lg-6">
                     <ul class="features-items">
+                {%- endif -%}
                         <li class="feature-item">
                             <div class="left-icon">
-                                <img src="assets/images/icons/metrics.svg" width="100px" height="100px" alt="Econometrics">
+                                <img src="{{ subject.icon }}" width="100px" height="100px" alt="{{ subject.title }}">
                             </div>
                             <div class="right-content">
-                                <h4>Econometrics</h4>
-                                <p>We know how to apply Statistics to the social sciences. We have experience teaching and tutoring students in Econometrics.</p>
-                                <a href="#" class="text-button">Discover More</a>
+                                <h4>{{ subject.title }}</h4>
+                                {{ subject.content | split: '<!-- more -->' | first | markdownify }}
+                                <a href="{{ subject.url }}" class="text-button">Discover More</a>
                             </div>
                         </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/icons/code.svg" width="100px" height="100px" alt="Programming">
-                            </div>
-                            <div class="right-content">
-                                <h4>Programming</h4>
-                                <p>Our tutors help undergraduate and graduate students write code at top universities. We help with R, Python, JavaScript, and more.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/icons/fin.svg" width="100px" height="100px" alt="Business and Finance">
-                            </div>
-                            <div class="right-content">
-                                <h4>Business and Finance</h4><p>Our tutors have experience tutoring and teaching MBA students at top business schools. We can help with any course.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
+                {%- endfor -%}
                     </ul>
                 </div>
             </div>
@@ -169,7 +133,7 @@ https://templatemo.com/tm-548-training-studio
                         <h2>In <em>person</em> and <em>online</em> tutoring</h2>
                         <p>Get tutoring that fits your needs and schedule.</p>
                         <div class="main-button scroll-to-section">
-                            <a id="Setmore_button_iframe" style="float:none" href="https://my.setmore.com/bookingpage/5ba69a07-8e22-4e64-8c44-e269aa132813">Request Tutoring</a>
+                            {%- include setmore/button.html -%}
                         </div>
                     </div>
                 </div>
@@ -440,12 +404,13 @@ https://templatemo.com/tm-548-training-studio
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; 2020 Think Tutor</p>                 
+                    <p>Copyright &copy; 2020 {{ site.title }}</p>                 
                 </div>
             </div>
         </div>
     </footer>
-        
+    
+    <!-- Setmore -->
     <script id="setmore_script" type="text/javascript" src="https://my.setmore.com/webapp/js/src/others/setmore_iframe.js"></script>
 
     <!-- jQuery -->
