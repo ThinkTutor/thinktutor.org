@@ -41,6 +41,10 @@ plugins:
 markdown: kramdown
 sass:
   style: compressed
+compress_html:
+  comments: all
+  endings: all
+  startings: all
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
