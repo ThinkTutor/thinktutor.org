@@ -122,7 +122,7 @@ layout: home
                             <li><a href="{{ tutor.social.github | cgi_escape | escape | prepend: 'https://github.com/' }}" title="{{ tutor.social.github | escape }}" target="_blank"><svg><use xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#github' | relative_url }}"></use></svg></a></li>
                             {%- endif -%}
                             {%- if tutor.social.email -%}
-                            <li><a href="{{ tutor.social.linkedin | cgi_escape | escape | prepend: 'mailto:' }}" title="{{ tutor.social.email | escape }}"><svg><use xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#email' | relative_url }}"></use></svg></a></li>
+                            <li><a href="{{ tutor.social.email | cgi_escape | escape | prepend: 'mailto:' }}" title="{{ tutor.social.email | escape }}"><svg><use xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#email' | relative_url }}"></use></svg></a></li>
                             {%- endif -%}
                         </ul>
                         {%- endif -%}
