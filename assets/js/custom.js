@@ -1,7 +1,5 @@
 (function ($) {
 
-	"use strict";
-
 	$(window).on("scroll", function () {
 		var scroll = $(window).scrollTop();
 		var box = $('.header-text').height();

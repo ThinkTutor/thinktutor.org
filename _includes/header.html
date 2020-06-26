@@ -1,0 +1,31 @@
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky{% unless page.layout == 'home' %} background-header{% endunless %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{{ '/' | absolute_url }}" class="logo">
+                        {% include tools/finalword.html content=site.title %}
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="{{ '/#top' | absolute_url }}" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="{{ '/#features' | absolute_url }}"> Subjects</a></li>
+                        <li class="scroll-to-section"><a href="{{ '/#about' | absolute_url }}">About</a></li>
+                        <li class="scroll-to-section"><a href="{{ '/#contact-us' | absolute_url }}">Contact</a></li>
+                        <li class="main-button">
+                            {%- include setmore/button.html -%}
+                        </li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->

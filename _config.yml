@@ -16,7 +16,7 @@
 title: Think Tutor
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Tutoring that works
+  Tutoring that Works
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -25,6 +25,14 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 collections:
   subjects:
     output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "subjects"
+    values:
+      layout: "subject"
 
 plugins:
   - jekyll-seo
