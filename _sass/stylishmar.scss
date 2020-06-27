@@ -681,6 +681,11 @@ features
   text-transform: capitalize;
 }
 
+.feature-item .right-content p {
+  margin-left: 120px;
+  min-height: 54.2px;
+}
+
 .feature-item .right-content a.text-button {
   margin-top: 7px;
   display: inline-block;
@@ -939,6 +944,6 @@ responsive
 
 @media (max-width: $phonewidth) {
   .feature-item .right-content a.text-button {
-    margin-left: 130px;
+    margin-left: 120px;
   }
 }
