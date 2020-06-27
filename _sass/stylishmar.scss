@@ -1,16 +1,39 @@
 /* ---------------------------------------------
 Table of contents
 ------------------------------------------------
-01. reset
-02. global styles
-03. header
-04. banner
-05. features
-06. about
-07. contact
-08. footer
-09. responsive
+01. variables
+02. reset
+03. global styles
+04. header
+05. banner
+06. features
+07. about
+08. contact
+09. footer
+10. responsive
 --------------------------------------------- */
+/* 
+---------------------------------------------
+variables
+--------------------------------------------- 
+*/
+// colors
+$main-color: #00B4FF;
+$highlight-color: #DD557E;
+$hover-color: #47C8FF;
+
+$text-dark: #1E1E24;
+$text-light: #545464;
+
+// fonts
+$main-font: 'Poppins', sans-serif;
+
+// media widths
+$lgtabletwidth: 1000px;
+$mdtabletwidth: 1000px;
+$phonewidth: 450px;
+$lgdesktodwidth: 1200px;
+
 /* 
 ---------------------------------------------
 reset
