@@ -286,10 +286,6 @@ header
   margin-top: 27px;
   margin-right: 0px;
   background-color: transparent;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   position: relative;
   z-index: 999;
 }
@@ -345,6 +341,10 @@ header
 .background-header .main-nav .nav li a.active {
   color: $main-color;
   opacity: 1;
+}
+
+.header-area .main-nav input#menu {
+  display: none;
 }
 
 .header-area .main-nav .menu-trigger {
@@ -427,14 +427,14 @@ header
   top: 10px;
 }
 
-.header-area .main-nav .menu-trigger.active span,
-.header-area .main-nav .menu-trigger.active span:before,
-.header-area .main-nav .menu-trigger.active span:after {
+.header-area .main-nav #menu:checked + .menu-trigger span,
+.header-area .main-nav #menu:checked + .menu-trigger span:before,
+.header-area .main-nav #menu:checked + .menu-trigger span:after {
   background-color: transparent;
   width: 100%;
 }
 
-.header-area .main-nav .menu-trigger.active span:before {
+.header-area .main-nav #menu:checked + .menu-trigger span:before {
   -moz-transform: translateY(6px) translateX(1px) rotate(45deg);
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
@@ -442,11 +442,11 @@ header
   background-color: #1e1e1e;
 }
 
-.background-header .main-nav .menu-trigger.active span:before {
+.background-header .main-nav #menu:checked + .menu-trigger span:before {
   background-color: #1e1e1e;
 }
 
-.header-area .main-nav .menu-trigger.active span:after {
+.header-area .main-nav #menu:checked + .menu-trigger span:after {
   -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
@@ -454,7 +454,7 @@ header
   background-color: #1e1e1e;
 }
 
-.background-header .main-nav .menu-trigger.active span:after {
+.background-header .main-nav #menu:checked + .menu-trigger span:after {
   background-color: #1e1e1e;
 }
 
@@ -511,12 +511,12 @@ header
   .header-area .main-nav .nav {
     float: none;
     width: 100%;
-    display: none;
-    -webkit-transition: all 0s ease 0s;
-    -moz-transition: all 0s ease 0s;
-    -o-transition: all 0s ease 0s;
-    transition: all 0s ease 0s;
+    height: 0px;
+    transition: height ease .6s;
     margin-left: 0px;
+  }
+  .header-area .main-nav #menu:checked ~ .nav {
+    height: 256px;
   }
   .header-area .main-nav .nav li:first-child {
     border-top: 1px solid #eee;
