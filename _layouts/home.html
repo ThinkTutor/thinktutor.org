@@ -5,9 +5,5 @@ layout: default
 {{ content }}
 
 <!-- Homepage Specific JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-<script>
-    {%- include js/home.js -%}
-</script>
+<script src="{{ '/assets/js/home.js' | relative_url }}" async></script>
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" async></script>
