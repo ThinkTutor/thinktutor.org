@@ -31,7 +31,7 @@ $main-font: 'Poppins', sans-serif;
 // media widths
 $lgtabletwidth: 1000px;
 $mdtabletwidth: 1000px;
-$phonewidth: 450px;
+$tinywidth: 400px;
 $lgdesktodwidth: 1200px;
 
 /* 
@@ -705,7 +705,8 @@ features
 
 .feature-item .right-content p {
   margin-left: 120px;
-  min-height: 54.2px;
+  margin-bottom: 0;
+  min-height: 70.2px;
 }
 
 .feature-item .right-content a.text-button {
@@ -725,7 +726,7 @@ call to action
 
 #call-to-action {
   padding: 120px 0px;
-  background-image: url(https://res.cloudinary.com/dsimenzvu/image/upload/c_scale,b_rgb:1e1e24,f_auto,o_18,q_auto,w_1600/writing-1149962_l20hmw.jpg);
+  background-image: url(https://res.cloudinary.com/mariabetto/image/upload/c_scale,b_rgb:1e1e24,f_auto,o_18,q_auto,w_1600/writing-1149962_l20hmw.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -763,6 +764,9 @@ about
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
   padding: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #about .tutor-item img {
@@ -834,7 +838,7 @@ contact
 
 #contact-us .contact-form {
   padding: 80px;
-  background-image: url(https://res.cloudinary.com/dsimenzvu/image/upload/c_scale,b_rgb:1e1e24,f_auto,o_18,q_auto,w_800/books-690219_zbfxpx.jpg);
+  background-image: url(https://res.cloudinary.com/mariabetto/image/upload/c_scale,b_rgb:1e1e24,f_auto,o_18,q_auto,w_800/books-690219_zbfxpx.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -964,8 +968,21 @@ responsive
 
 }
 
-@media (max-width: $phonewidth) {
-  .feature-item .right-content a.text-button {
-    margin-left: 120px;
+@media (max-width: $tinywidth) {
+  .main-banner .caption h2 {
+    font-size: (64px / $tinywidth) * 100vw;
+  }
+  .main-banner .caption h6 {
+    font-size: (18px / $tinywidth) * 100vw;
+  }
+  .header-area .main-nav .logo {
+    font-size: (32px / $tinywidth) * 100vw;
+  }
+  .cta-content h2 {
+    font-size: (55px / $tinywidth) * 100vw;
+  }
+  .feature-item .right-content a.text-button,
+  .feature-item .right-content p {
+    margin-left: 0;
   }
 }
