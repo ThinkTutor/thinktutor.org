@@ -1,5 +1,6 @@
 - name: "Maria Fernanda Petri Betto"
-  image: "assets/images/tutors/mar.jpg"
+  image: "https://res.cloudinary.com/mariabetto/image/upload/c_scale,f_auto,q_auto,w_400/profiles/maria"
+  image_remote: true
   title: "Economics PhD Student, Northwestern University"
   bio: >-
     With 14+ years of teaching experience and an exceptional quantitative background, Maria's successful track record as an instructor comes as no surprise. She tutors in almost all areas of Economics, Mathematics, Statistics and Programming.
@@ -9,7 +10,8 @@
     email: "mar@mfpb.me"
 
 - name: "Matthew Thomas"
-  image: "assets/images/tutors/mwt.png"
+  image: "https://res.cloudinary.com/mariabetto/image/upload/c_scale,f_auto,q_auto,w_400/profiles/matthew"
+  image_remote: true
   title: "Economics PhD Student, Northwestern University"
   bio: >-
     Formerly a Math/Econ major at Williams college and now an Economics PhD student at Northwestern University, Matthew's quantitative skills and passion for teaching are unparalleled. He tutors in almost all areas of Economics, Mathematics, Statistics and Programming.
@@ -18,11 +20,13 @@
     github: "mattwthomas"
     email: "matthew@mwt.me"
 
-- name: "Someone Else"
-  title: "Something at Somewhere"
+- name: "João Monteiro"
+  image: "https://res.cloudinary.com/mariabetto/image/upload/c_scale,f_auto,q_auto,w_400/profiles/joao"
+  image_remote: true
+  title: "Finance PhD Student, Kellogg School of Management"
   bio: >-
-    A person who knows things.
+    João has over 6 years of teaching experience in Finance, Economics and Business for MBA students. He is currently a PhD student in Finance at Northwestern. He tutors in all courses in Economics, Finance, Business and Statistics.
   social:
-    twitter: ""
+    email: "joao.monteiro@kellogg.northwestern.edu"
   
 

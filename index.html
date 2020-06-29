@@ -5,7 +5,7 @@ layout: home
 <!-- ***** Main Banner Area Start ***** -->
 <div class="main-banner" id="top">
     <video autoplay muted loop id="bg-video">
-        <source src="https://res.cloudinary.com/dsimenzvu/video/upload/f_auto,q_auto:good,vc_auto/v1593203343/equations_gxi88r.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/mariabetto/video/upload/f_auto,q_auto:good,vc_auto/v1593203343/equations_gxi88r.mp4" type="video/mp4" />
     </video>
 
     <div class="video-overlay header-text">
@@ -100,10 +100,13 @@ layout: home
                     <div class="image-thumb">
                         <noscript class="loading-lazy">
                             <img src="
-                            {%- if tutor.image -%}
-                            {{ tutor.image | relative_url }}
+                                {%- if tutor.image -%}
+                                    {%- unless tutor.image_remote -%}
+                                        {{ site.baseurl }}/
+                                    {%- endunless -%}
+                                {{ tutor.image }}
                             {%- else -%}
-                            {{ 'assets/images/tutors/unknown.svg' | relative_url }}
+                                {{ 'assets/images/tutors/unknown.svg' | relative_url }}
                             {%- endif -%}
                             " alt="Picture of {{ tutor.name }}" loading="lazy">
                         </noscript>
