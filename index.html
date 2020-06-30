@@ -101,13 +101,14 @@ layout: home
                         <noscript class="loading-lazy">
                             <img src="
                                 {%- if tutor.image -%}
-                                    {%- unless tutor.image_remote -%}
-                                        {{ site.baseurl }}/
-                                    {%- endunless -%}
-                                {{ tutor.image }}
-                            {%- else -%}
-                                {{ 'assets/images/tutors/unknown.svg' | relative_url }}
-                            {%- endif -%}
+                                    {%- if tutor.image_remote -%}
+                                        {{ tutor.image }}
+                                    {%- else -%}
+                                        {%- include tools/imgcdn.html path=tutor.image width=400 -%}
+                                    {%- endif -%}
+                                {%- else -%}
+                                    {{ 'assets/images/tutors/unknown.svg' | relative_url }}
+                                {%- endif -%}
                             " alt="Picture of {{ tutor.name }}" loading="lazy">
                         </noscript>
                     </div>

@@ -19,6 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Tutoring that Works
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "thinktutor.org" # the base hostname & protocol for your site, e.g. http://example.com
+cdn: "ajsxgydazo.cloudimg.io/v7" # CDN prefix to put in front of images
 # twitter_username: jekyllrb
 # github_username:  jekyll
 

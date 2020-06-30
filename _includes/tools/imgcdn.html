@@ -1,0 +1,13 @@
+{%- if jekyll.environment == "development" -%}
+    {{ include.path | relative_url }}
+{%- else -%}
+    {{ site.cdn | append: '/' | append: site.url | prepend: '//' }}{{ include.path | relative_url }}
+    {%- if include.width -%}
+        {{ include.width | prepend: '?width=' }}
+        {%- if include.bright -%}
+            {{ include.bright | prepend: '&bright=' }}
+        {%- endif -%}
+    {%- elsif include.bright -%}
+        {{ include.bright | prepend: '?bright=' }}
+    {%- endif -%}
+{%- endif -%}
