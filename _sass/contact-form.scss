@@ -1,0 +1,91 @@
+.contact-form {
+  padding: 60px;
+  background-image: url(https://res.cloudinary.com/mariabetto/image/upload/c_scale,b_rgb:1e1e24,f_auto,o_18,q_auto,w_800/books-690219_zbfxpx.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+
+  input, textarea {
+      color: $text-light;
+      font-size: 13px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      width: 100%;
+      height: 40px;
+      outline: none;
+      line-height: 40px;
+      padding: 0px 10px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
+
+  input {
+    margin-bottom: 30px;
+  }
+
+  textarea {
+    height: 150px;
+    resize: none;
+    margin-bottom: 4px;
+  }
+
+  ::-webkit-input-placeholder { /* Edge */
+    color: $text-light;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $text-light;
+  }
+
+  ::placeholder {
+    color: $text-light;
+  }
+
+  button {
+    display: inline-block;
+    font-size: 13px;
+    padding: 11px 17px;
+    background-color: $main-color;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all .3s;
+    border: none;
+    outline: none;
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+#contact {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+}
+  
+#lock-modal {
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+}
+  
+#loading-circle {
+  position: absolute;
+  color: $main-color;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+}
