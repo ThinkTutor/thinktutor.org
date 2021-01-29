@@ -858,10 +858,7 @@ a > code {
 }
 
 .nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  display: block;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
