@@ -7,7 +7,7 @@
   social:
     linkedin: "mariabetto"
     github: "mariabetto"
-    email: "mar@mfpb.me"
+    email: "maria@thinktutor.org"
 
 - name: "Matthew Thomas"
   image: "assets/images/tutors/matthew.jpg"
@@ -18,7 +18,7 @@
   social:
     linkedin: "mattwthomas"
     github: "mattwthomas"
-    email: "matthew@mwt.me"
+    email: "matthew@thinktutor.org"
 
 - name: "João Monteiro"
   image: "assets/images/tutors/joao.jpg"
@@ -27,6 +27,6 @@
   bio: >-
     João has over 6 years of teaching experience in Finance, Economics and Business for MBA students. He is currently a PhD student in Finance at Northwestern. He tutors in all courses in Economics, Finance, Business and Statistics.
   social:
-    email: "joao.monteiro@kellogg.northwestern.edu"
+    email: "joao@thinktutor.org"
   
 
