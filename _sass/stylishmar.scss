@@ -509,6 +509,7 @@ header
     overflow: hidden;
   }
   .header-area .main-nav .nav {
+    align-content: flex-start;
     float: none;
     width: 100%;
     height: 0px;
