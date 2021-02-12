@@ -38,7 +38,9 @@ defaults:
       layout: "subject"
 
 plugins:
-  - jekyll-seo
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-assets
 
 # Build settings
 markdown: kramdown

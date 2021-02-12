@@ -38,7 +38,7 @@ video:
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
                     <h2><em>Subjects</em> we tutor</h2>
-                    <img src="assets/images/separator.svg" alt="" width="75" height="15">
+                    {%- asset separator.svg @inline -%}
                     <p>Need Math, Statistics or Economics assistance? Our tutors can help. From high school to advanced
                         degree programs, we will give you the power to succeed in your learning goals. Meet with our tutors
                         weekly to turn a class, MOOC, or self study into a personalized tutorial.</p>
@@ -57,7 +57,7 @@ video:
                     {%- endif -%}
                     <li class="feature-item">
                         <div class="left-icon">
-                            <img src="{{ subject.icon }}" width="100px" height="100px" alt="{{ subject.title }}">
+                            {%- asset '{{ subject.icon }}' width="100px" height="100px" alt="{{ subject.title }}" -%}
                         </div>
                         <div class="right-content">
                             <h4>{{ subject.title }}</h4>
@@ -99,7 +99,7 @@ video:
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
                     <h2>Expert <em>Tutors</em></h2>
-                    <img src="assets/images/separator.svg" alt="" width="45" height="15">
+                    {%- asset separator.svg @inline -%}
                     <p>All of our tutors are highly motivated and accomplished academics with strong quantitative
                         backgrounds, currently pursuing PhD degrees from top institutions. </p>
                 </div>
@@ -110,19 +110,15 @@ video:
             <div class="col-lg-4">
                 <div class="tutor-item">
                     <div class="image-thumb">
-                        <noscript class="loading-lazy">
-                            <img src="
-                                {%- if tutor.image -%}
-                                    {%- if tutor.image_remote -%}
-                                        {{ tutor.image }}
-                                    {%- else -%}
-                                        {%- include tools/imgcdn.html path=tutor.image width=400 -%}
-                                    {%- endif -%}
+                            {%- if tutor.image -%}
+                                {%- if tutor.image_remote -%}
+                                    <img src="{{ tutor.image }}" alt="Picture of {{ tutor.name }}" loading="lazy">
                                 {%- else -%}
-                                    {{ 'assets/images/tutors/unknown.svg' | relative_url }}
+                                    {%- asset '{{ tutor.image }}' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
                                 {%- endif -%}
-                            " alt="Picture of {{ tutor.name }}" loading="lazy">
-                        </noscript>
+                            {%- else -%}
+                                {%- asset 'tutors/unknown.svg' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
+                            {%- endif -%}
                     </div>
                     <div class="down-content">
                         <span>{{ tutor.title }}</span>
@@ -179,12 +175,10 @@ video:
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div id="map">
-                    <noscript class="loading-lazy">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11850.390467497462!2d-87.67983871719173!3d42.05180811675712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1593008515252!5m2!1sen!2sus"
-                            width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen
-                            loading="lazy"></iframe>
-                    </noscript>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11850.390467497462!2d-87.67983871719173!3d42.05180811675712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1593008515252!5m2!1sen!2sus"
+                        width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen
+                        loading="lazy"></iframe>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12">

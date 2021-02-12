@@ -1,5 +1,5 @@
 - name: "Maria Fernanda Petri Betto"
-  image: "assets/images/tutors/maria.jpg"
+  image: "tutors/maria.jpg"
   image_remote: false
   title: "Economics PhD Student, Northwestern University"
   bio: >-
@@ -10,7 +10,7 @@
     email: "maria@thinktutor.org"
 
 - name: "Matthew Thomas"
-  image: "assets/images/tutors/matthew.jpg"
+  image: "tutors/matthew.jpg"
   image_remote: false
   title: "Economics PhD Student, Northwestern University"
   bio: >-
@@ -21,7 +21,7 @@
     email: "matthew@thinktutor.org"
 
 - name: "João Monteiro"
-  image: "assets/images/tutors/joao.jpg"
+  image: "tutors/joao.jpg"
   image_remote: false
   title: "Finance PhD Student, Kellogg School of Management"
   bio: >-

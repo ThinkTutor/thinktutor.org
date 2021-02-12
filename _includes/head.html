@@ -7,12 +7,5 @@
     {%- seo -%}
 
     {%- include favicon.html -%}
-
-    <style>
-        {%- capture scss_sheet -%}{%- include loader.scss -%}{%- endcapture -%}
-        {{ scss_sheet | scssify }}
-    </style>
-
-    <!-- JS Files -->
-    <script src="{{ '/assets/js/loading-attribute-polyfill.min.js' | relative_url }}" async></script>
+    {%- asset main.scss -%}
 </head>

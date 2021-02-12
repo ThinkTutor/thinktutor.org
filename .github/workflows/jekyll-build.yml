@@ -1,0 +1,43 @@
+name: Generate jekyll site
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.6
+    - name: Cache dependencies
+      id: cache-deps
+      uses: actions/cache@v1
+      with:
+        path: vendor/cache
+        key: bundle-use-ruby-ubuntu-latest-jekyll-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          bundle-use-ruby-ubuntu-latest-jekyll-
+    - name: Install dependencies
+      run: |
+        bundle install
+        bundle package
+    - name: Build site
+      run: |
+        bundle exec jekyll build
+        touch '_site/.nojekyll'
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: _site
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SQUASH_HISTORY: True
+        MESSAGE: Build site
