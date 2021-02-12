@@ -1,114 +1,15 @@
 /* ---------------------------------------------
 Table of contents
 ------------------------------------------------
-01. variables
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. about
-08. contact
-09. footer
-10. responsive
+01. global styles
+02. header
+03. banner
+04. features
+05. about
+06. contact
+07. footer
+08. responsive
 --------------------------------------------- */
-/* 
----------------------------------------------
-variables
---------------------------------------------- 
-*/
-// colors
-$main-color: #00B4FF;
-$highlight-color: #DD557E;
-$hover-color: #47C8FF;
-
-$text-dark: #1E1E24;
-$text-light: #545464;
-
-// media widths
-$lgtabletwidth: 1000px;
-$mdtabletwidth: 1000px;
-$tinywidth: 400px;
-$lgdesktodwidth: 1200px;
-
-/* 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
-pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
-s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
-figure, header, nav, section, article, aside, footer, figcaption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-}
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.clearfix {
-  display: inline-block;
-}
-
-html[xmlns] .clearfix {
-  display: block;
-}
-
-* html .clearfix {
-  height: 1%;
-}
-
-ul, li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-header, nav, section, article, aside, footer, hgroup {
-  display: block;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  font-weight: 400;
-  background-color: #fff;
-  font-size: 16px;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-ul {
-  margin-bottom: 0px;
-}
-
-p {
-  font-size: 14px;
-  line-height: 25px;
-  color: $text-light;
-}
-
 /* 
 ---------------------------------------------
 global styles
@@ -120,17 +21,18 @@ html {
 }
 
 ::selection {
-  background: $highlight-color;
+  background: $info;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: $highlight-color;
+  background: $info;
   color: #fff;
 }
 
 @media (max-width: $lgtabletwidth) {
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
   .mobile-top-fix {
@@ -154,7 +56,7 @@ html {
 .section-heading h2 {
   font-size: 28px;
   font-weight: 800;
-  color: $text-dark;
+  color: $headings-color;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: 0px;
@@ -163,7 +65,7 @@ html {
 
 .section-heading h2 em {
   font-style: normal;
-  color: $main-color;
+  color: $primary;
 }
 
 .section-heading img {
@@ -178,23 +80,11 @@ html {
   color: #fff;
 }
 
-.main-button a, 
-.main-button a:hover {
-  display: inline-block;
-  font-size: 15px;
-  padding: 12px 20px;
-  background-color: $main-color;
-  color: #fff;
-  text-align: center;
-  font-weight: 400;
-  text-transform: uppercase;
-  transition: all .3s;
+.btn-primary,
+.btn-primary:hover {
+  color: #fff !important;
+  font-weight: bold;
 }
-
-.main-button a:hover {
-  background-color: $hover-color;
-}
-
 
 /* 
 ---------------------------------------------
@@ -202,33 +92,33 @@ header
 --------------------------------------------- 
 */
 
-.background-header {
-  background: rgba(250,250,250,0.99) !important;
-  height: 80px!important;
-  position: fixed!important;
+.header-area.background-header {
+  background: rgba(250, 250, 250, 0.99) !important;
+  height: 80px !important;
+  position: fixed !important;
   top: 0px;
   left: 0px;
   right: 0px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
 }
 
-.background-header a.logo,
-.background-header a.logo:hover,
-.background-header .main-nav .nav li a {
-  color: $text-dark;
+.header-area.background-header a.navbar-brand,
+.header-area.background-header a.navbar-brand:hover,
+.header-area.background-header .navbar .navbar-nav li a {
+  color: $headings-color;
 }
 
-.background-header .main-nav .nav li:last-child a,
-.background-header .main-nav .nav li:last-child a:hover {
+.header-area.background-header .navbar .navbar-nav li:last-child a,
+.header-area.background-header .navbar .navbar-nav li:last-child a:hover {
   color: #fff;
 }
 
-.background-header .main-nav .nav li:hover a {
-  color: $hover-color;
+.header-area.background-header .navbar .navbar-nav li:hover a {
+  color: $primary-hover;
 }
 
-.background-header .nav li a.active {
-  color: $main-color;
+.header-area.background-header .navbar-nav li a.active {
+  color: $primary;
 }
 
 .header-area {
@@ -238,106 +128,91 @@ header
   right: 0px;
   z-index: 100;
   height: 80px;
-  background: rgba(255,255,255,0.12);
-  -webkit-transition: all .5s ease 0s;
-  -moz-transition: all .5s ease 0s;
-  -o-transition: all .5s ease 0s;
-  transition: all .5s ease 0s;
-  & a, & a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  & a,
+  & a:hover {
     color: #fff;
   }
 }
 
-.header-area .main-nav {
+.header-area .navbar {
   min-height: 80px;
   background: transparent;
 }
 
-.header-area .main-nav .logo {
-  line-height: 80px;
+.header-area .navbar .navbar-brand {
   font-size: 32px;
   font-weight: 800;
   text-transform: uppercase;
-  float: left;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
 }
 
-.header-area .main-nav .logo em {
+.header-area .navbar .navbar-brand em {
   font-style: normal;
-  color: $main-color;
+  color: $primary;
   font-weight: 900;
 }
 
-.header-area .main-nav .nav {
+.header-area .navbar .navbar-nav {
   float: right;
-  margin-top: 27px;
   margin-right: 0px;
   background-color: transparent;
   position: relative;
   z-index: 999;
 }
 
-.header-area .main-nav .nav li {
-  padding-left: 20px;
-  padding-right: 20px;
+.header-area .navbar .navbar-nav li {
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
 }
 
-.header-area .main-nav .nav li a {
-  display: block;
-  font-weight: 500;
+.header-area .navbar .navbar-nav li a {
+  font-weight: 600;
+  color: #fff;
   font-size: 13px;
   text-transform: uppercase;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  height: 40px;
-  line-height: 40px;
   border: transparent;
   letter-spacing: 1px;
 }
 
-.header-area .main-nav .nav li:last-child a {
-  display: inline-block;
-  font-size: 13px;
-  padding: 11px 17px;
-  background-color: $main-color;
-  color: #fff;
+.header-area .navbar .navbar-nav li:last-child a {
+  padding: {
+    left: 11px;
+    right: 11px;
+  }
   text-align: center;
-  font-weight: 400;
   letter-spacing: 0px;
-  text-transform: uppercase;
-  transition: all .3s;
   height: auto;
-  line-height: 20px;
 }
 
-.header-area .main-nav .nav li:last-child a:hover {
+.header-area .navbar .navbar-nav li:last-child a:hover {
   color: #fff;
-  background-color: $hover-color;
+  background-color: $primary-hover;
   opacity: 1;
 }
 
-.header-area .main-nav .nav li:hover a,
-.header-area .main-nav .nav li a.active {
-  color: $main-color;
+.header-area .navbar .navbar-nav li:hover a,
+.header-area .navbar .navbar-nav li a.active {
+  color: $primary;
   opacity: 1;
 }
 
-.background-header .main-nav .nav li:hover a,
-.background-header .main-nav .nav li a.active {
-  color: $main-color;
+.header-area.background-header .navbar .navbar-nav li:hover a,
+.header-area.background-header .navbar .navbar-nav li a.active {
+  color: $primary;
   opacity: 1;
 }
 
-.header-area .main-nav input#menu {
+.header-area .navbar input#menu {
   display: none;
 }
 
-.header-area .main-nav .menu-trigger {
+.header-area .navbar .menu-trigger {
   cursor: pointer;
   display: block;
   position: absolute;
@@ -350,9 +225,9 @@ header
   display: none;
 }
 
-.header-area .main-nav .menu-trigger span,
-.header-area .main-nav .menu-trigger span:before,
-.header-area .main-nav .menu-trigger span:after {
+.header-area .navbar .menu-trigger span,
+.header-area .navbar .menu-trigger span:before,
+.header-area .navbar .menu-trigger span:after {
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
@@ -365,14 +240,14 @@ header
   left: 0;
 }
 
-.background-header .main-nav .menu-trigger span,
-.background-header .main-nav .menu-trigger span:before,
-.background-header .main-nav .menu-trigger span:after {
+.header-area.background-header .navbar .menu-trigger span,
+.header-area.background-header .navbar .menu-trigger span:before,
+.header-area.background-header .navbar .menu-trigger span:after {
   background-color: #1e1e1e;
 }
 
-.header-area .main-nav .menu-trigger span:before,
-.header-area .main-nav .menu-trigger span:after {
+.header-area .navbar .menu-trigger span:before,
+.header-area .navbar .menu-trigger span:after {
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
@@ -386,21 +261,21 @@ header
   width: 75%;
 }
 
-.background-header .main-nav .menu-trigger span:before,
-.background-header .main-nav .menu-trigger span:after {
+.header-area.background-header .navbar .menu-trigger span:before,
+.header-area.background-header .navbar .menu-trigger span:after {
   background-color: #1e1e1e;
 }
 
-.header-area .main-nav .menu-trigger span:before,
-.header-area .main-nav .menu-trigger span:after {
+.header-area .navbar .menu-trigger span:before,
+.header-area .navbar .menu-trigger span:after {
   content: "";
 }
 
-.header-area .main-nav .menu-trigger span {
+.header-area .navbar .menu-trigger span {
   top: 16px;
 }
 
-.header-area .main-nav .menu-trigger span:before {
+.header-area .navbar .menu-trigger span:before {
   -moz-transform-origin: 33% 100%;
   -ms-transform-origin: 33% 100%;
   -webkit-transform-origin: 33% 100%;
@@ -409,7 +284,7 @@ header
   z-index: 10;
 }
 
-.header-area .main-nav .menu-trigger span:after {
+.header-area .navbar .menu-trigger span:after {
   -moz-transform-origin: 33% 0;
   -ms-transform-origin: 33% 0;
   -webkit-transform-origin: 33% 0;
@@ -417,14 +292,14 @@ header
   top: 10px;
 }
 
-.header-area .main-nav #menu:checked + .menu-trigger span,
-.header-area .main-nav #menu:checked + .menu-trigger span:before,
-.header-area .main-nav #menu:checked + .menu-trigger span:after {
+.header-area .navbar #menu:checked + .menu-trigger span,
+.header-area .navbar #menu:checked + .menu-trigger span:before,
+.header-area .navbar #menu:checked + .menu-trigger span:after {
   background-color: transparent;
   width: 100%;
 }
 
-.header-area .main-nav #menu:checked + .menu-trigger span:before {
+.header-area .navbar #menu:checked + .menu-trigger span:before {
   -moz-transform: translateY(6px) translateX(1px) rotate(45deg);
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
@@ -432,11 +307,11 @@ header
   background-color: #1e1e1e;
 }
 
-.background-header .main-nav #menu:checked + .menu-trigger span:before {
+.header-area.background-header .navbar #menu:checked + .menu-trigger span:before {
   background-color: #1e1e1e;
 }
 
-.header-area .main-nav #menu:checked + .menu-trigger span:after {
+.header-area .navbar #menu:checked + .menu-trigger span:after {
   -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
@@ -444,7 +319,7 @@ header
   background-color: #1e1e1e;
 }
 
-.background-header .main-nav #menu:checked + .menu-trigger span:after {
+.header-area.background-header .navbar #menu:checked + .menu-trigger span:after {
   background-color: #1e1e1e;
 }
 
@@ -452,31 +327,27 @@ header
   min-height: 80px;
 }
 
-.header-area.header-sticky .nav {
-  margin-top: 20px !important;
-}
-
-.header-area.header-sticky .nav li a.active {
-  color: $highlight-color;
+.header-area.header-sticky .navbar-nav li a.active {
+  color: $info;
 }
 
 @media (max-width: $lgdesktodwidth) {
-  .header-area .main-nav .nav li {
+  .header-area .navbar .navbar-nav li {
     padding-left: 12px;
     padding-right: 12px;
   }
-  .header-area .main-nav:before {
+  .header-area .navbar:before {
     display: none;
   }
 }
 
 @media (max-width: $mdtabletwidth) {
-  .header-area .main-nav .logo {
+  .header-area .navbar .navbar-brand {
     color: #1e1e1e;
   }
-  .header-area.header-sticky .nav li a:hover,
-  .header-area.header-sticky .nav li a.active {
-    color: $main-color !important;
+  .header-area.header-sticky .navbar-nav li a:hover,
+  .header-area.header-sticky .navbar-nav li a.active {
+    color: $primary !important;
     opacity: 1;
   }
   .header-area {
@@ -489,68 +360,65 @@ header
   .header-area .container {
     padding: 0px;
   }
-  .header-area .logo {
+  .header-area .navbar-brand {
     margin-left: 30px;
   }
   .header-area .menu-trigger {
     display: block !important;
   }
-  .header-area .main-nav {
+  .header-area .navbar {
     overflow: hidden;
   }
-  .header-area .main-nav .nav {
+  .header-area .navbar .navbar-nav {
     align-content: flex-start;
     float: none;
     width: 100%;
-    height: 0px;
-    transition: height ease .6s;
     margin-left: 0px;
   }
-  .header-area .main-nav #menu:checked ~ .nav {
-    height: 256px;
+  .header-area .navbar .navbar-collapse {
+    transition: height ease 0.6s;
+    margin-top: 6px;
+    height: 0px;
   }
-  .header-area .main-nav .nav li:first-child {
-    border-top: 1px solid #eee;
+  .header-area .navbar #menu:checked ~ .navbar-collapse {
+    height: 263px;
   }
-  .header-area .main-nav .nav li:last-child {
+  .header-area .navbar .navbar-nav li:last-child {
     width: 100%;
-    background-color: $main-color;
+    background-color: $primary;
     color: #fff;
   }
-  .header-area .main-nav .nav li:last-child a {
-    background-color: $main-color!important;
+  .header-area .navbar .navbar-nav li:last-child a {
+    background-color: $primary !important;
   }
-  .header-area .main-nav .nav li:last-child a:hover,
-  .header-area .main-nav .nav li:last-child:hover a {
-    background-color: $main-color!important;
-    color: #fff!important;
+  .header-area .navbar .navbar-nav li:last-child a:hover,
+  .header-area .navbar .navbar-nav li:last-child:hover a {
+    background-color: $primary !important;
+    color: #fff !important;
   }
-  .header-area.header-sticky .nav {
-    margin-top: 80px !important;
-  }
-  .header-area .main-nav .nav li {
+  .header-area .navbar .navbar-nav li {
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #eee;
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
-  .header-area .main-nav .nav li a {
+  .header-area .navbar .navbar-nav li a {
     height: 50px !important;
     line-height: 50px !important;
     padding: 0px !important;
     border: none !important;
     background: #f7f7f7 !important;
-    color: $text-dark !important;
+    color: $headings-color !important;
   }
-  .header-area .main-nav .nav li:last-child a {
-    color: #fff!important;
+  .header-area .navbar .navbar-nav li:last-child a {
+    color: #fff !important;
   }
-  .header-area .main-nav .nav li a:hover {
+  .header-area .navbar .navbar-nav li a:hover {
     background: #eee !important;
-    color: $hover-color !important;
+    color: $primary-hover !important;
   }
-  .header-area .main-nav .nav li.submenu ul {
+  .header-area .navbar .navbar-nav li.submenu ul {
     position: relative;
     visibility: inherit;
     opacity: 1;
@@ -562,33 +430,33 @@ header
     box-shadow: none;
     height: 0px;
   }
-  .header-area .main-nav .nav li.submenu ul li a {
+  .header-area .navbar .navbar-nav li.submenu ul li a {
     font-size: 12px;
     font-weight: 400;
   }
-  .header-area .main-nav .nav li.submenu ul li a:hover:before {
+  .header-area .navbar .navbar-nav li.submenu ul li a:hover:before {
     width: 0px;
   }
-  .header-area .main-nav .nav li.submenu ul.active {
+  .header-area .navbar .navbar-nav li.submenu ul.active {
     height: auto !important;
   }
-  .header-area .main-nav .nav li.submenu:after {
-    color: #3B566E;
+  .header-area .navbar .navbar-nav li.submenu:after {
+    color: #3b566e;
     right: 25px;
     font-size: 14px;
     top: 15px;
   }
-  .header-area .main-nav .nav li.submenu:hover ul, .header-area .main-nav .nav li.submenu:focus ul {
+  .header-area .navbar .navbar-nav li.submenu:hover ul,
+  .header-area .navbar .navbar-nav li.submenu:focus ul {
     height: 0px;
   }
 }
 
 @media (min-width: $mdtabletwidth) {
-  .header-area .main-nav .nav {
+  .header-area .navbar .navbar-nav {
     display: flex !important;
   }
 }
-
 
 /* 
 ---------------------------------------------
@@ -601,25 +469,25 @@ banner
 }
 
 #bg-video {
-    min-width: 100%;
-    min-height: 100vh;
-    max-width: 100%;
-    max-height: 100vh;
-    object-fit: cover;
-    z-index: -1;
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
 #bg-video::-webkit-media-controls {
-    display: none !important;
+  display: none !important;
 }
 
 .video-overlay {
-    position: absolute;
-    background-color: rgba(35,45,57,0.6);
-    top: 0;
-    left: 0;
-    bottom: 7px;
-    width: 100%;
+  position: absolute;
+  background-color: rgba(35, 45, 57, 0.6);
+  top: 0;
+  left: 0;
+  bottom: 7px;
+  width: 100%;
 }
 
 .main-banner .caption {
@@ -628,7 +496,7 @@ banner
   width: 80%;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .main-banner .caption h6 {
@@ -652,10 +520,9 @@ banner
 
 .main-banner .caption h2 em {
   font-style: normal;
-  color: $main-color;
+  color: $primary;
   font-weight: 900;
 }
-
 
 /*
 ---------------------------------------------
@@ -675,7 +542,7 @@ features
 .feature-item .left-icon img {
   float: left;
   margin-right: 20px;
-  background-color: $main-color;
+  background-color: $primary;
   border-radius: 5%;
   padding: 10px;
 }
@@ -686,9 +553,9 @@ features
 
 .feature-item .right-content h4 {
   margin-top: 0px;
-  margin-bottom:  7px;
+  margin-bottom: 7px;
   letter-spacing: 0.25px;
-  color: $text-dark;
+  color: $headings-color;
   font-size: 19px;
   font-weight: 600;
   text-transform: capitalize;
@@ -705,7 +572,7 @@ features
   display: inline-block;
   font-size: 13px;
   text-transform: uppercase;
-  color: $highlight-color;
+  color: $info;
   font-weight: 500;
 }
 
@@ -734,7 +601,7 @@ call to action
 
 .cta-content h2 em {
   font-style: normal;
-  color: $main-color;
+  color: $primary;
 }
 
 .cta-content p {
@@ -753,7 +620,7 @@ about
 #about .tutor-item {
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   padding: 40px;
   max-width: 400px;
   margin-left: auto;
@@ -768,7 +635,7 @@ about
 #about .tutor-item span {
   font-size: 13px;
   font-weight: 500;
-  color: $highlight-color;
+  color: $info;
   display: inline-block;
   margin-top: 25px;
   margin-bottom: 10px;
@@ -777,13 +644,17 @@ about
 #about .tutor-item h4 {
   font-size: 19px;
   font-weight: 600;
-  color: $text-dark;
+  color: $headings-color;
   letter-spacing: 0.5px;
   margin-bottom: 18px;
 }
 
 #about .tutor-item p {
   margin-bottom: 20px;
+}
+
+#about .tutor-item ul.social-icons {
+  padding-left: 0;
 }
 
 #about .tutor-item ul.social-icons li {
@@ -796,22 +667,21 @@ about
 }
 
 #about .tutor-item ul.social-icons li a {
-  color: $text-dark;
-  transition: all .3s;
+  color: $headings-color;
+  transition: all 0.3s;
 }
 
 #about .tutor-item ul.social-icons li a:hover {
-  color: $hover-color;
+  color: $primary-hover;
 }
 
 #about .tutor-item ul.social-icons li svg {
-	width: 16px;
-	height: 16px;
-	display: inline-block;
-	fill: currentColor;
-	vertical-align: text-bottom;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
 }
-
 
 /* 
 ---------------------------------------------
@@ -838,19 +708,18 @@ footer {
 }
 
 footer p {
-  color: $text-dark;
+  color: $headings-color;
   font-size: 13px;
 }
 
 footer p a {
   cursor: pointer;
-  color: $main-color;
+  color: $primary;
 }
 
 footer p a:hover {
-  color: $hover-color;
+  color: $primary-hover;
 }
-
 
 /* 
 ---------------------------------------------
@@ -858,9 +727,7 @@ responsive
 --------------------------------------------- 
 */
 
-
 @media (max-width: $lgtabletwidth) {
-
   .main-banner .caption h2 {
     font-size: 64px;
   }
@@ -886,7 +753,6 @@ responsive
   #contact-us .contact-form #contact {
     padding: 30px;
   }
-
 }
 
 @media (max-width: $tinywidth) {
@@ -896,7 +762,7 @@ responsive
   .main-banner .caption h6 {
     font-size: (18px / $tinywidth) * 100vw;
   }
-  .header-area .main-nav .logo {
+  .header-area .navbar .navbar-brand {
     font-size: (32px / $tinywidth) * 100vw;
   }
   .cta-content h2 {

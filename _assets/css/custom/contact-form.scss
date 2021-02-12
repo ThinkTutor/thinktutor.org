@@ -12,7 +12,7 @@
   }
 
   input, textarea {
-      color: $text-light;
+      color: $body-color;
       font-size: 13px;
       border: 1px solid #ddd;
       background-color: #fff;
@@ -37,22 +37,22 @@
   }
 
   ::-webkit-input-placeholder { /* Edge */
-    color: $text-light;
+    color: $body-color;
   }
 
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $text-light;
+    color: $body-color;
   }
 
   ::placeholder {
-    color: $text-light;
+    color: $body-color;
   }
 
   button {
     display: inline-block;
     font-size: 13px;
     padding: 11px 17px;
-    background-color: $main-color;
+    background-color: $primary;
     color: #fff;
     text-align: center;
     font-weight: 400;
@@ -61,7 +61,7 @@
     border: none;
     outline: none;
     &:hover {
-      background-color: $hover-color;
+      background-color: $primary-hover;
     }
   }
 }
@@ -85,7 +85,7 @@
   
 #loading-circle {
   position: absolute;
-  color: $main-color;
+  color: $primary;
   top: 0;
   bottom: 0;
   left: 0;

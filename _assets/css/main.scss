@@ -1,3 +1,34 @@
+/* 
+---------------------------------------------
+variables
+--------------------------------------------- 
+*/
+// colors
+$primary: #00B4FF;
+$info: #DD557E;
+$primary-hover: #47C8FF;
+$headings-color: #1E1E24;
+$body-color: #545464;
+
+// recolor
+$link-color: $primary;
+$link-hover-color: $primary-hover;
+
+// media widths
+$tinywidth: 576px;
+$mdtabletwidth: 768px;
+$lgtabletwidth: 992px;
+$lgdesktodwidth: 1200px;
+
+//Bootstrap options
+$enable-rounded: false;
+$link-decoration: none;
+
+/* 
+---------------------------------------------
+imports
+--------------------------------------------- 
+*/
 @import
   "bootstrap-custom",
   "custom/index",

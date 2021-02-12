@@ -15,7 +15,7 @@ function onScroll(event) {
 	};
 	/* highlight active section links */
 	var scroll_adj = scrollPos + 100;
-	var navLinks = document.querySelectorAll('.nav .scroll-to-section a');
+	var navLinks = document.querySelectorAll('.navbar .navbar-nav .nav-item a.nav-link');
 	navLinks.forEach(function (navLink) {
 		var refElement = document.querySelector(navLink.getAttribute('href').split('/').pop());
 		if (refElement.offsetTop <= scroll_adj && refElement.offsetTop + refElement.offsetHeight >= scroll_adj) {

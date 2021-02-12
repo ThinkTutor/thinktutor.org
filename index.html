@@ -23,8 +23,8 @@ video:
             <h2>
                 {%- include tools/finalword.html content="tutoring from experts" -%}
             </h2>
-            <div class="main-button scroll-to-section">
-                <a href="{{ '/#contact-us' | relative_url }}">Request Tutoring</a>
+            <div class="scroll-to-section">
+                <a class="btn btn-primary" href="{{ '/#contact-us' | relative_url }}" role="button">Request Tutoring</a>
             </div>
         </div>
     </div>
@@ -82,8 +82,8 @@ video:
                 <div class="cta-content">
                     <h2>Individual tutoring in <em>person</em> and <em>online</em></h2>
                     <p>Getting help is easier than you think. Our tutors fit your needs and schedule.</p>
-                    <div class="main-button scroll-to-section">
-                        <a href="{{ '/#contact-us' | relative_url }}">Contact Us</a>
+                    <div class="scroll-to-section">
+                        <a class="btn btn-primary" href="{{ '/#contact-us' | relative_url }}" role="button">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@ video:
                                 {%- if tutor.image_remote -%}
                                     <img src="{{ tutor.image }}" alt="Picture of {{ tutor.name }}" loading="lazy">
                                 {%- else -%}
-                                    {%- asset '{{ tutor.image }}' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
+                                    {%- asset '{{ tutor.image @optim }}' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
                                 {%- endif -%}
                             {%- else -%}
                                 {%- asset 'tutors/unknown.svg' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
@@ -181,7 +181,7 @@ video:
                         loading="lazy"></iframe>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-xs-12 dark-bg">
                 <div class="contact-form">
                     <h2>Contact Us!</h2>
                     <p>

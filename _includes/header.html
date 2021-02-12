@@ -1,30 +1,33 @@
 <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky{% unless page.layout == 'home' %} background-header{% endunless %}">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="{{ '/' | relative_url }}" class="logo">
-                        {% include tools/finalword.html content=site.title %}
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <input type="checkbox" id="menu">
-                    <label for="menu" class="menu-trigger">
-                        <span>Menu</span>
-                    </label>
-                    <ul class="nav">
-                        <li class="scroll-to-section"><a href="{{ '/#top' | relative_url }}" class="active">Home</a></li>
-                        <li class="scroll-to-section"><a href="{{ '/#features' | relative_url }}"> Subjects</a></li>
-                        <li class="scroll-to-section"><a href="{{ '/#about' | relative_url }}">About</a></li>
-                        <li class="main-button scroll-to-section"><a href="{{ '/#contact-us' | relative_url }}">Contact Us</a></li>
-                        </li>
-                    </ul>
-                    <!-- ***** Menu End ***** -->
-                </nav>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <!-- ***** Logo Start ***** -->
+                <a href="{{ '/' | relative_url }}" class="navbar-brand">
+                    {% include tools/finalword.html content=site.title %}
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <input type="checkbox" id="menu">
+                <label for="menu" class="navbar-toggler menu-trigger">
+                    <span>Menu</span>
+                </label>
+                <div class="navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ '/#top' | relative_url }}"
+                            class="active">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ '/#features' | relative_url }}">
+                            Subjects</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="{{ '/#about' | relative_url }}">About</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary"
+                            href="{{ '/#contact-us' | relative_url }}" role="button">Contact Us</a></li>
+                    </li>
+                </ul>
+                </div>
+                <!-- ***** Menu End ***** -->
             </div>
-        </div>
     </div>
 </header>
 <!-- ***** Header Area End ***** -->
