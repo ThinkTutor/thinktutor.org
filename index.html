@@ -45,9 +45,9 @@ video:
         </div>
             <div class="row subjects">
                 {%- for subject in site.subjects -%}
-                <div class="col-sm-6 item">
+                <div class="col-md-6 item">
                     <div class="row">
-                        <div class="col-md-12 col-lg-5 icon">
+                        <div class="col-12 col-sm-4 col-md-6 col-lg-4 col-xxl-3 icon">
                             {%- asset '{{ subject.icon }}' class="img-fluid mx-auto" alt="{{ subject.title }}" -%}
                             <a href="{{ subject.url }}" class="text-button">Discover More</a>
                         </div>
