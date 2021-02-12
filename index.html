@@ -32,44 +32,33 @@ video:
 <!-- ***** Main Banner Area End ***** -->
 
 <!-- ***** Subjects Start ***** -->
-<section class="section" id="features">
+<section class="section" id="subjects">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="section-heading">
-                    <h2><em>Subjects</em> we tutor</h2>
-                    {%- asset separator.svg @inline -%}
-                    <p>Need Math, Statistics or Economics assistance? Our tutors can help. From high school to advanced
-                        degree programs, we will give you the power to succeed in your learning goals. Meet with our tutors
-                        weekly to turn a class, MOOC, or self study into a personalized tutorial.</p>
-                </div>
-            </div>
-            <!-- assign cutoff for two column layout -->
-            {%- assign cutoff = site.subjects.size | divided_by: 2.0 | ceil -%}
-            <div class="col-lg-6">
-                <ul class="features-items">
-                    {%- for subject in site.subjects -%}
-                    {%- if forloop.index0 == cutoff -%}
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <ul class="features-items">
-                    {%- endif -%}
-                    <li class="feature-item">
-                        <div class="left-icon">
-                            {%- asset '{{ subject.icon }}' width="100px" height="100px" alt="{{ subject.title }}" -%}
-                        </div>
-                        <div class="right-content">
-                            <h4>{{ subject.title }}</h4>
-                            {{ subject.content | split: '
-                            <!-- more -->' | first | markdownify }}
-                            <a href="{{ subject.url }}" class="text-button">Discover More</a>
-                        </div>
-                    </li>
-                    {%- endfor -%}
-                </ul>
+        <div class="col-lg-6 offset-lg-3">
+            <div class="section-heading">
+                <h2><em>Subjects</em> we tutor</h2>
+                {%- asset separator.svg @inline -%}
+                <p>Need Math, Statistics or Economics assistance? Our tutors can help. From high school to advanced
+                    degree programs, we will give you the power to succeed in your learning goals. Meet with our tutors
+                    weekly to turn a class, MOOC, or self study into a personalized tutorial.</p>
             </div>
         </div>
+            <div class="row subjects">
+                {%- for subject in site.subjects -%}
+                <div class="col-sm-6 item">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-5 icon">
+                            {%- asset '{{ subject.icon }}' class="img-fluid mx-auto" alt="{{ subject.title }}" -%}
+                            <a href="{{ subject.url }}" class="text-button">Discover More</a>
+                        </div>
+                        <div class="col">
+                            <h3 class="name">{{ subject.title }}</h3>
+                            {{ subject.content | split: '<!-- more -->' | first | markdownify }}
+                        </div>
+                    </div>
+                </div>
+                {%- endfor -%}
+            </div>
     </div>
 </section>
 <!-- ***** Subjects End ***** -->
@@ -211,7 +200,7 @@ video:
                             </div>
                             <div class="col-lg-12">
                                 <fieldset>
-                                    <button type="submit" id="form-submit" class="main-button h-captcha"
+                                    <button type="submit" id="form-submit" class="btn btn-primary h-captcha"
                                         data-sitekey="8398bfb2-83c8-45fe-b3c8-a6cedbef3549"
                                         data-callback="onSubmit">Send Message</button>
                                 </fieldset>
