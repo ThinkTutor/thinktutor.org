@@ -343,7 +343,7 @@ responsive
 
 @media (max-width: $lgtabletwidth) {
   .masthead .caption h2 {
-    font-size: 65px;
+    font-size: 58px;
   }
   #subjects {
     margin-bottom: 110px;
@@ -371,10 +371,13 @@ responsive
 
 @media (max-width: $tinywidth) {
   .masthead .caption h2 {
-    font-size: (65px / $tinywidth) * 100vw;
+    font-size: (58px / $tinywidth) * 100vw;
   }
   .masthead .caption h6 {
     font-size: (18px / $tinywidth) * 100vw;
+  }
+  .header-area .navbar .navbar-brand {
+    font-size: (32px / $tinywidth) * 100vw;
   }
   .cta-content h2 {
     font-size: (55px / $tinywidth) * 100vw;
