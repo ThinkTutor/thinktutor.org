@@ -1,20 +1,16 @@
 ---
 layout: home
-video: 
-  pre: "https://res.cloudinary.com/mariabetto/video/upload"
-  transform: "ac_none,c_scale,q_auto:good,so_2,vc_auto,w_1600"
-  post: "v1612134740/production_ID_5200349_xsjpw2"
+video:
+    pre: "https://res.cloudinary.com/mariabetto/video/upload"
+    transform: "ac_none,c_scale,q_auto:good,so_2,vc_auto,w_1600"
+    post: "v1612134740/production_ID_5200349_xsjpw2"
 ---
 
 <!-- ***** Main Banner Area Start ***** -->
-<div class="main-banner" id="top">
+<div id="top" class="masthead text-center text-white d-flex">
     <video autoplay muted loop id="bg-video" poster="{{ page.video.pre }}/{{ page.video.post }}.jpg">
-        <source
-            src="{{ page.video.pre }}/{{ page.video.transform }}/{{ page.video.post }}.webm"
-            type="video/webm" />
-        <source
-            src="{{ page.video.pre }}/{{ page.video.transform }}/{{ page.video.post }}.mp4"
-            type="video/mp4" />
+        <source src="{{ page.video.pre }}/{{ page.video.transform }}/{{ page.video.post }}.webm" type="video/webm" />
+        <source src="{{ page.video.pre }}/{{ page.video.transform }}/{{ page.video.post }}.mp4" type="video/mp4" />
     </video>
 
     <div class="video-overlay header-text">
@@ -43,22 +39,23 @@ video:
                     weekly to turn a class, MOOC, or self study into a personalized tutorial.</p>
             </div>
         </div>
-            <div class="row subjects">
-                {%- for subject in site.subjects -%}
-                <div class="col-md-6 item">
-                    <div class="row">
-                        <div class="col-12 col-sm-4 col-md-6 col-lg-4 col-xxl-3 icon">
-                            {%- asset '{{ subject.icon }}' class="img-fluid mx-auto" alt="{{ subject.title }}" -%}
-                            <a href="{{ subject.url }}" class="text-button">Discover More</a>
-                        </div>
-                        <div class="col">
-                            <h3 class="name">{{ subject.title }}</h3>
-                            {{ subject.content | split: '<!-- more -->' | first | markdownify }}
-                        </div>
+        <div class="row subjects">
+            {%- for subject in site.subjects -%}
+            <div class="col-md-6 item">
+                <div class="row">
+                    <div class="col-5 col-sm-4 col-md-6 col-lg-4 col-xxl-3 icon">
+                        {%- asset '{{ subject.icon }}' class="img-fluid mx-auto" alt="{{ subject.title }}" -%}
+                        <a href="{{ subject.url }}" class="text-button">Discover More</a>
+                    </div>
+                    <div class="col">
+                        <h3 class="name">{{ subject.title }}</h3>
+                        {{ subject.content | split: '
+                        <!-- more -->' | first | markdownify }}
                     </div>
                 </div>
-                {%- endfor -%}
             </div>
+            {%- endfor -%}
+        </div>
     </div>
 </section>
 <!-- ***** Subjects End ***** -->
@@ -72,7 +69,8 @@ video:
                     <h2>Individual tutoring in <em>person</em> and <em>online</em></h2>
                     <p>Getting help is easier than you think. Our tutors fit your needs and schedule.</p>
                     <div class="scroll-to-section">
-                        <a class="btn btn-primary" href="{{ '/#contact-us' | relative_url }}" role="button">Contact Us</a>
+                        <a class="btn btn-primary" href="{{ '/#contact-us' | relative_url }}" role="button">Contact
+                            Us</a>
                     </div>
                 </div>
             </div>
@@ -99,15 +97,16 @@ video:
             <div class="col-lg-4">
                 <div class="tutor-item">
                     <div class="image-thumb">
-                            {%- if tutor.image -%}
-                                {%- if tutor.image_remote -%}
-                                    <img src="{{ tutor.image }}" alt="Picture of {{ tutor.name }}" loading="lazy">
-                                {%- else -%}
-                                    {%- asset '{{ tutor.image @optim }}' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
-                                {%- endif -%}
-                            {%- else -%}
-                                {%- asset 'tutors/unknown.svg' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
-                            {%- endif -%}
+                        {%- if tutor.image -%}
+                        {%- if tutor.image_remote -%}
+                        <img src="{{ tutor.image }}" alt="Picture of {{ tutor.name }}" loading="lazy">
+                        {%- else -%}
+                        {%- asset '{{ tutor.image @optim }}' width=400 alt="Picture of {{ tutor.name }}" loading="lazy"
+                        -%}
+                        {%- endif -%}
+                        {%- else -%}
+                        {%- asset 'tutors/unknown.svg' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
+                        {%- endif -%}
                     </div>
                     <div class="down-content">
                         <span>{{ tutor.title }}</span>
@@ -174,7 +173,12 @@ video:
                 <div class="contact-form">
                     <h2>Contact Us!</h2>
                     <p>
-                        Fill out the form below or email us at <a href="mailto:hello@thinktutor.org">hello@thinktutor.org</a> to get in touch with one of our expert tutors. This site is protected by hCaptcha and its <a href="https://hcaptcha.com/privacy">Privacy Policy</a> and <a href="https://hcaptcha.com/terms">Terms of Service</a> apply. The money raised from this captcha is donated to charity.
+                        Fill out the form below or email us at <a
+                            href="mailto:hello@thinktutor.org">hello@thinktutor.org</a> to get in touch with one of our
+                        expert tutors. This site is protected by hCaptcha and its <a
+                            href="https://hcaptcha.com/privacy">Privacy Policy</a> and <a
+                            href="https://hcaptcha.com/terms">Terms of Service</a> apply. The money raised from this
+                        captcha is donated to charity.
                     </p>
                     <form id="contact" onsubmit="return false">
                         <div class="row">

@@ -92,7 +92,7 @@ banner
 --------------------------------------------- 
 */
 
-.main-banner {
+.masthead {
   position: relative;
 }
 
@@ -118,7 +118,7 @@ banner
   width: 100%;
 }
 
-.main-banner .caption {
+.masthead .caption {
   text-align: center;
   position: absolute;
   width: 80%;
@@ -127,7 +127,7 @@ banner
   transform: translate(-50%, -50%);
 }
 
-.main-banner .caption h6 {
+.masthead .caption h6 {
   margin-top: 0px;
   font-size: 18px;
   text-transform: uppercase;
@@ -136,7 +136,7 @@ banner
   letter-spacing: 0.5px;
 }
 
-.main-banner .caption h2 {
+.masthead .caption h2 {
   margin-top: 30px;
   margin-bottom: 25px;
   font-size: 84px;
@@ -146,7 +146,7 @@ banner
   letter-spacing: 1px;
 }
 
-.main-banner .caption h2 em {
+.masthead .caption h2 em {
   font-style: normal;
   color: $primary;
   font-weight: 900;
@@ -342,8 +342,8 @@ responsive
 */
 
 @media (max-width: $lgtabletwidth) {
-  .main-banner .caption h2 {
-    font-size: 64px;
+  .masthead .caption h2 {
+    font-size: 65px;
   }
   #subjects {
     margin-bottom: 110px;
@@ -370,14 +370,11 @@ responsive
 }
 
 @media (max-width: $tinywidth) {
-  .main-banner .caption h2 {
-    font-size: (64px / $tinywidth) * 100vw;
+  .masthead .caption h2 {
+    font-size: (65px / $tinywidth) * 100vw;
   }
-  .main-banner .caption h6 {
+  .masthead .caption h6 {
     font-size: (18px / $tinywidth) * 100vw;
-  }
-  .header-area .navbar .navbar-brand {
-    font-size: (32px / $tinywidth) * 100vw;
   }
   .cta-content h2 {
     font-size: (55px / $tinywidth) * 100vw;

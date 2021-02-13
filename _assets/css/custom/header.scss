@@ -57,7 +57,7 @@ header
 }
 
 .header-area .navbar .navbar-brand {
-    font-size: 32px;
+    font-size: 32px; 
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -257,6 +257,7 @@ header
 @media (max-width: $mdtabletwidth) {
     .header-area .navbar .navbar-brand {
         color: #1e1e1e;
+        margin-left: 0;
     }
     .header-area.header-sticky .navbar-nav li a:hover,
     .header-area.header-sticky .navbar-nav li a.active {
