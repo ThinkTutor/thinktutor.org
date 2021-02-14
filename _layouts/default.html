@@ -2,11 +2,11 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {%- include head.html -%}
 
-<body>
+<body{% if page.layout == 'home' %} data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0"{% endif %}>
 
     {%- include header.html -%}
 

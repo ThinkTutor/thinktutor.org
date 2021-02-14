@@ -1,33 +1,19 @@
-<!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky{% unless page.layout == 'home' %} background-header{% endunless %}">
+<nav id="navbar" class="navbar navbar-expand-lg {% unless page.layout == 'home' %} background-header{% endunless %}">
     <div class="container">
-        <nav class="navbar navbar-expand-md">
-            <div class="container-fluid">
-                <!-- ***** Logo Start ***** -->
-                <a href="{{ '/' | relative_url }}" class="navbar-brand">
-                    {% include tools/finalword.html content=site.title %}
-                </a>
-                <!-- ***** Logo End ***** -->
-                <!-- ***** Menu Start ***** -->
-                <input type="checkbox" id="menu">
-                <label for="menu" class="navbar-toggler menu-trigger">
-                    <span>Menu</span>
-                </label>
-                <div class="navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="{{ '/#top' | relative_url }}"
-                            class="active">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ '/#subjects' | relative_url }}">
-                            Subjects</a></li>
-                    <li class="nav-item"><a class="nav-link"
-                            href="{{ '/#about' | relative_url }}">About</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary"
-                            href="{{ '/#contact-us' | relative_url }}" role="button">Contact Us</a></li>
-                    </li>
-                </ul>
-                </div>
-                <!-- ***** Menu End ***** -->
-            </div>
+        <a href="{{ '/' | relative_url }}" class="navbar-brand">
+            {% include tools/finalword.html content=site.title %}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#top" class="active">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary" href="#contact-us" role="button">Contact Us</a></li>
+            </ul>
+        </div>
     </div>
-</header>
-<!-- ***** Header Area End ***** -->
+</nav>
