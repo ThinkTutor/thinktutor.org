@@ -7,7 +7,7 @@ video:
 ---
 
 <!-- ***** Main Banner Area Start ***** -->
-<div id="top" class="masthead text-center text-white d-flex">
+<header id="top" class="masthead text-center dark-bg d-flex">
     <video autoplay muted loop id="bg-video" poster="{{ page.video.pre }}/{{ page.video.post }}.jpg">
         <source src="{{ page.video.pre }}/{{ page.video.transform }}/{{ page.video.post }}.webm" type="video/webm" />
         <source src="{{ page.video.pre }}/{{ page.video.transform }}/{{ page.video.post }}.mp4" type="video/mp4" />
@@ -24,26 +24,29 @@ video:
             </div>
         </div>
     </div>
-</div>
+</header>
 <!-- ***** Main Banner Area End ***** -->
 
 <!-- ***** Subjects Start ***** -->
 <section class="section" id="subjects">
     <div class="container">
-        <div class="col-lg-6 offset-lg-3">
-            <div class="section-heading">
-                <h2><em>Subjects</em> we tutor</h2>
-                {%- asset separator.svg @inline -%}
-                <p>Need Math, Statistics or Economics assistance? Our tutors can help. From high school to advanced
-                    degree programs, we will give you the power to succeed in your learning goals. Meet with our tutors
-                    weekly to turn a class, MOOC, or self study into a personalized tutorial.</p>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2><em>Subjects</em> we tutor</h2>
+                    {%- asset separator.svg @inline -%}
+                    <p>Need Math, Statistics or Economics assistance? Our tutors can help. From high school to advanced
+                        degree programs, we will give you the power to succeed in your learning goals. Meet with our
+                        tutors
+                        weekly to turn a class, MOOC, or self study into a personalized tutorial.</p>
+                </div>
             </div>
         </div>
         <div class="row subjects">
             {%- for subject in site.subjects -%}
             <div class="col-md-6 item">
                 <div class="row">
-                    <div class="col-5 col-sm-4 col-md-6 col-lg-4 col-xxl-3 icon">
+                    <div class="col-4 col-md-6 col-lg-4 col-xxl-3 icon">
                         {%- asset '{{ subject.icon }}' class="img-fluid mx-auto" alt="{{ subject.title }}" -%}
                         <a href="{{ subject.url }}" class="text-button">Discover More</a>
                     </div>
@@ -65,7 +68,7 @@ video:
     <div class="container">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
-                <div class="cta-content">
+                <div class="cta-content dark-bg">
                     <h2>Individual tutoring in <em>person</em> and <em>online</em></h2>
                     <p>Getting help is easier than you think. Our tutors fit your needs and schedule.</p>
                     <div class="scroll-to-section">
@@ -169,8 +172,8 @@ video:
                         loading="lazy"></iframe>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-xs-12 dark-bg">
-                <div class="contact-form">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="contact-form dark-bg">
                     <h2>Contact Us!</h2>
                     <p>
                         Fill out the form below or email us at <a

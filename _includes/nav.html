@@ -1,0 +1,19 @@
+<nav id="navbar" class="navbar navbar-expand-lg{% if page.layout == 'home' %} transparent-navbar{% endif %}">
+    <div class="container">
+        <h1><a href="{{ '/' | relative_url }}" class="navbar-brand">
+            {% include tools/finalword.html content=site.title %}
+        </a></h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="{% unless page.layout == 'home' %}/{% endunless %}#top" class="active">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% unless page.layout == 'home' %}/{% endunless %}#subjects">Subjects</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% unless page.layout == 'home' %}/{% endunless %}#about">About</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary" href="{% unless page.layout == 'home' %}/{% endunless %}#contact-us" role="button">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
