@@ -198,7 +198,7 @@ call to action
 
 #call-to-action {
   padding: 120px 0px;
-  background-image: url(https://res.cloudinary.com/mariabetto/image/upload/c_scale,b_rgb:1e1e24,f_auto,o_28,q_auto,w_1600/v1612137289/documents_zmrzmm.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url("documents-min.jpg @optim");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

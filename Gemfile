@@ -15,6 +15,7 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 
 # optimize images
 gem 'image_optim'
+gem "image_optim_pack"
 
 # new version of sprockets has issues
 gem "sprockets", "~> 3.7"
