@@ -30,7 +30,7 @@ html {
   color: #fff;
 }
 
-@media (max-width: $lgtabletwidth) {
+@media (max-width: $bs-lg) {
   html,
   body {
     overflow-x: hidden;
@@ -341,7 +341,7 @@ responsive
 --------------------------------------------- 
 */
 
-@media (max-width: $lgtabletwidth) {
+@media (max-width: $bs-lg) {
   .masthead .caption h2 {
     font-size: 58px;
   }

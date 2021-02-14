@@ -16,9 +16,20 @@ $link-hover-color: $primary-hover;
 
 // media widths
 $tinywidth: 400px;
-$mdtabletwidth: 768px;
-$lgtabletwidth: 992px;
-$lgdesktodwidth: 1200px;
+$bs-sm: 576px;
+$bs-md: 768px;
+$bs-lg: 992px;
+$bs-xl: 1200px;
+$bs-xxl: 1400px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $bs-sm,
+  md: $bs-md,
+  lg: $bs-lg,
+  xl: $bs-xl,
+  xxl: $bs-xxl
+);
 
 //Bootstrap options
 $enable-rounded: false;

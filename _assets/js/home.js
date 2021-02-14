@@ -9,9 +9,9 @@ function onScroll(event) {
 	var header_h = header.offsetHeight;
 
 	if (scrollPos >= box_h - header_h) {
-		header.classList.add('background-header');
+		header.classList.remove('transparent-navbar');
 	} else {
-		header.classList.remove('background-header');
+		header.classList.add('transparent-navbar');
 	};
 };
 
