@@ -14,16 +14,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Think Tutor
-# email: your-email@example.com
+tagline: Tutoring from Experts
 description: >- # this means to ignore newlines until "baseurl:"
-  Get tutoring from experts. Think Tutor is a private tutoring cooperative 
-  with in-person tutoring in Evanston and remote tutoring worldwide. Our tutors
-  have or are working on doctorates from top schools in the subjects they teach.
+  Think Tutor is a private tutoring nonprofit with in-person tutoring in Evanston and remote
+  tutoring worldwide. All of our tutors have graduate degrees in the subjects they teach. We
+  provide tutoring at any level from High School to graduate studies.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://thinktutor.org" # the base hostname & protocol for your site, e.g. http://example.com
 cdn: "ajsxgydazo.cloudimg.io/v7" # CDN prefix to put in front of images
 # twitter_username: jekyllrb
 # github_username:  jekyll
+
+logo: "/assets/images/logo.svg"
 
 social:
   email: "hello@thinktutor.org"
@@ -31,6 +33,11 @@ social:
   linkedin: "thinktutor"
   facebook: "thinktutor.org"
   opencollective: "thinktutor"
+  links:
+    - "https://github.com/thinktutor"
+    - "https://linkedin.com/company/thinktutor"
+    - "https://www.facebook.com/thinktutor.org"
+    - "https://opencollective.com/thinktutor"
 
 collections:
   subjects:
