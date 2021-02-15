@@ -37,7 +37,7 @@
                             <li><a href="{{ tutor.social.linkedin | cgi_escape | escape | prepend: 'https://www.linkedin.com/in/' }}"
                                     title="{{ tutor.social.linkedin | escape }}" target="_blank"><svg>
                                         <use
-                                            xlink:href="{{ '/assets/icons/minima-social-icons.svg#linkedin' | relative_url }}">
+                                            xlink:href="{% asset icons/minima-social-icons.svg @path %}#linkedin">
                                         </use>
                                     </svg></a></li>
                             {%- endif -%}
@@ -45,7 +45,7 @@
                             <li><a href="{{ tutor.social.twitter | cgi_escape | escape | prepend: 'https://twitter.com/' }}"
                                     title="{{ tutor.social.twitter | escape }}" target="_blank"><svg>
                                         <use
-                                            xlink:href="{{ '/assets/icons/minima-social-icons.svg#twitter' | relative_url }}">
+                                            xlink:href="{% asset icons/minima-social-icons.svg @path %}#twitter">
                                         </use>
                                     </svg></a></li>
                             {%- endif -%}
@@ -53,7 +53,7 @@
                             <li><a href="{{ tutor.social.github | cgi_escape | escape | prepend: 'https://github.com/' }}"
                                     title="{{ tutor.social.github | escape }}" target="_blank"><svg>
                                         <use
-                                            xlink:href="{{ '/assets/icons/minima-social-icons.svg#github' | relative_url }}">
+                                            xlink:href="{% asset icons/minima-social-icons.svg @path %}#github">
                                         </use>
                                     </svg></a></li>
                             {%- endif -%}
@@ -61,7 +61,7 @@
                             <li><a href="{{ tutor.social.email | cgi_escape | escape | prepend: 'mailto:' }}"
                                     title="{{ tutor.social.email | escape }}"><svg>
                                         <use
-                                            xlink:href="{{ '/assets/icons/minima-social-icons.svg#email' | relative_url }}">
+                                            xlink:href="{% asset icons/minima-social-icons.svg @path %}#email">
                                         </use>
                                     </svg></a></li>
                             {%- endif -%}

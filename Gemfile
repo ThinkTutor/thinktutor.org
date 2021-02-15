@@ -6,7 +6,7 @@ gem 'kramdown-parser-gfm'
 group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
-  gem 'jekyll-assets'
+  gem 'jekyll-assets', github: 'thinktutor/jekyll-assets'
 end
 
 # bootstrap files
@@ -15,10 +15,11 @@ gem 'bootstrap', '~> 5.0.0.beta1'
 
 # optimize images
 gem 'image_optim'
+gem 'image_optim_bin'
 gem "image_optim_pack"
 
 # new version of sprockets has issues
-gem "sprockets", "~> 3.7"
+gem "sprockets"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
