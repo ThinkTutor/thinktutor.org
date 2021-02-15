@@ -1,0 +1,64 @@
+<!-- ***** Contact Us Area Starts ***** -->
+<section class="section" id="contact-us">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div id="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11850.390467497462!2d-87.67983871719173!3d42.05180811675712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1593008515252!5m2!1sen!2sus"
+                        width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="contact-form dark-bg">
+                    <h2>Contact Us!</h2>
+                    <p>
+                        Fill out the form below or email us at <a
+                            href="mailto:hello@thinktutor.org">hello@thinktutor.org</a> to get in touch with one of our
+                        expert tutors. This site is protected by hCaptcha and its <a
+                            href="https://hcaptcha.com/privacy">Privacy Policy</a> and <a
+                            href="https://hcaptcha.com/terms">Terms of Service</a> apply. The money raised from this
+                        captcha is donated to charity.
+                    </p>
+                    <form id="contact" onsubmit="return false">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 mb-3">
+                                <fieldset>
+                                    <label class="form-label" for="name">Name</label>
+                                    <input class="form-control" name="name" type="text" id="name" placeholder="Your Name*" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mb-3">
+                                <fieldset>
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control" name="email" type="text" id="email" pattern="[^ @]+@[^ @]+" placeholder="Your Email*" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12 mb-3">
+                                <fieldset>
+                                    <label class="form-label visually-hidden" for="body">Message</label>
+                                    <textarea class="form-control" name="body" rows="6" id="body" placeholder="Message"required=""></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <div id="form-message" class="alert d-none" role="alert">Success</div>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="btn btn-primary h-captcha"
+                                        data-sitekey="8398bfb2-83c8-45fe-b3c8-a6cedbef3549"
+                                        data-callback="onSubmit">Send Message</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div id="lock-modal" class="d-none">
+                            <div id="loading-circle" class="spinner-border" role="status"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Contact Us Area End ***** -->

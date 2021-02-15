@@ -7,8 +7,9 @@ Table of contents
 04. features
 05. about
 06. contact
-07. footer
-08. responsive
+07. FAQ
+08. footer
+09. responsive
 --------------------------------------------- */
 /* 
 ---------------------------------------------
@@ -266,6 +267,17 @@ contact
 
 #contact-us .container-fluid .col-lg-6 {
   padding: 0px;
+}
+
+/* 
+---------------------------------------------
+FAQ
+--------------------------------------------- 
+*/
+#faq {
+  .section-heading {
+    margin-bottom: 30px;
+  }
 }
 
 /* 

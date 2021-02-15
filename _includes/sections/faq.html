@@ -1,0 +1,30 @@
+<section class="section mb-4" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>{%- include tools/finalword.html content="Frequently Asked Questions" -%}</h2>
+                    {%- asset separator.svg @inline -%}
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="faq-accordion">
+            {%- for question in site.data.faq -%}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faq-heading{{ forloop.index }}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faq-collapse{{ forloop.index }}" aria-expanded="false" aria-controls="faq-collapse{{ forloop.index }}">
+                        {{ question.question }}
+                    </button>
+                </h2>
+                <div id="faq-collapse{{ forloop.index }}" class="accordion-collapse collapse" aria-labelledby="faq-heading{{ forloop.index }}"
+                    data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                        {{ question.answer | markdownify }}
+                    </div>
+                </div>
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>

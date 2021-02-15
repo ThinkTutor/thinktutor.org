@@ -1,0 +1,77 @@
+<!-- ***** About Starts ***** -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>Expert <em>Tutors</em></h2>
+                    {%- asset separator.svg @inline -%}
+                    <p>All of our tutors are highly motivated and accomplished academics with strong quantitative
+                        backgrounds, currently pursuing PhD degrees from top institutions. </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {%- for tutor in site.data.tutors -%}
+            <div class="col-lg-4">
+                <div class="tutor-item">
+                    <div class="image-thumb">
+                        {%- if tutor.image -%}
+                        {%- if tutor.image_remote -%}
+                        <img src="{{ tutor.image }}" alt="Picture of {{ tutor.name }}" loading="lazy">
+                        {%- else -%}
+                        {%- asset '{{ tutor.image @optim }}' width=400 alt="Picture of {{ tutor.name }}" loading="lazy"
+                        -%}
+                        {%- endif -%}
+                        {%- else -%}
+                        {%- asset 'tutors/unknown.svg' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
+                        {%- endif -%}
+                    </div>
+                    <div class="down-content">
+                        <span>{{ tutor.title }}</span>
+                        <h4>{{ tutor.name }}</h4>
+                        <p>{{ tutor.bio }}</p>
+                        {%- if tutor.social -%}
+                        <ul class="social-icons">
+                            {%- if tutor.social.linkedin -%}
+                            <li><a href="{{ tutor.social.linkedin | cgi_escape | escape | prepend: 'https://www.linkedin.com/in/' }}"
+                                    title="{{ tutor.social.linkedin | escape }}" target="_blank"><svg>
+                                        <use
+                                            xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#linkedin' | relative_url }}">
+                                        </use>
+                                    </svg></a></li>
+                            {%- endif -%}
+                            {%- if tutor.social.twitter -%}
+                            <li><a href="{{ tutor.social.twitter | cgi_escape | escape | prepend: 'https://twitter.com/' }}"
+                                    title="{{ tutor.social.twitter | escape }}" target="_blank"><svg>
+                                        <use
+                                            xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#twitter' | relative_url }}">
+                                        </use>
+                                    </svg></a></li>
+                            {%- endif -%}
+                            {%- if tutor.social.github -%}
+                            <li><a href="{{ tutor.social.github | cgi_escape | escape | prepend: 'https://github.com/' }}"
+                                    title="{{ tutor.social.github | escape }}" target="_blank"><svg>
+                                        <use
+                                            xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#github' | relative_url }}">
+                                        </use>
+                                    </svg></a></li>
+                            {%- endif -%}
+                            {%- if tutor.social.email -%}
+                            <li><a href="{{ tutor.social.email | cgi_escape | escape | prepend: 'mailto:' }}"
+                                    title="{{ tutor.social.email | escape }}"><svg>
+                                        <use
+                                            xlink:href="{{ '/assets/images/icons/minima-social-icons.svg#email' | relative_url }}">
+                                        </use>
+                                    </svg></a></li>
+                            {%- endif -%}
+                        </ul>
+                        {%- endif -%}
+                    </div>
+                </div>
+            </div>
+            {%- endfor -%}
+        </div>
+    </div>
+</section>
+<!-- ***** About Ends ***** -->
