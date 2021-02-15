@@ -8,7 +8,7 @@ layout: default
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
                     <h2>{{ page.title }}</h2>
-                    <img src="{{ '/assets/images/separator.svg' | relative_url }}" alt="" width="75" height="15">
+                    {%- asset separator.svg @inline -%}
                     {{ content }}
                 </div>
             </div>
