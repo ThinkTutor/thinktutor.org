@@ -1,6 +1,13 @@
-- question: "The first question?"
-  answer: "the first answer."
-- question: "The second question?"
-  answer: "the second answer."
-- question: "The third question?"
-  answer: "the third answer."
+- question: "Can I choose my tutor?"
+  answer: |
+    Yes. You can contact individual tutors from the [list of tutors](/#about). 
+    You can just communicate directly with your tutor about the times that work for you. We do not charge any platform fees.
+- question: "Can I use Think Tutor to get write my assignments for me?"
+  answer: |
+    No. Think Tutor is not an assignment answer service. We would love to help you achieve your academic goals or get better grades.
+    However, we do not support plagiarism.
+- question: "How does Think Tutor make money?"
+  answer: |
+    We don't. 100% of what you pay goes directly to your tutor. 
+    Think Tutor is a nonprofit with 501(c)(3) status through the [Open Collective Foundation](https://www.opencollective.foundation/).
+    If you would like to support our work, you can make a tax deductible contribution [here](https://opencollective.com/thinktutor).
