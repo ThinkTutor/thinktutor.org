@@ -152,7 +152,7 @@ features
       padding: 10px;
       max-width: 120px;
     }
-    a.text-button {
+    .text-button {
       display: block;
       margin-top: 0.33em;
       text-transform: uppercase;
@@ -220,7 +220,8 @@ about
     margin-top: 25px;
     margin-bottom: 10px;
   }
-  img {
+  img,
+  svg {
     width: 100%;
     border-radius: 5px;
   }
@@ -293,6 +294,9 @@ responsive
   #subjects {
     margin-bottom: 110px;
   }
+  .icon .text-button {
+    font-size: 16px;
+  }
   .tutor-item {
     margin-bottom: 30px;
   }
@@ -316,6 +320,14 @@ responsive
   }
   .header-area .navbar .navbar-brand {
     font-size: (32px / $tinywidth) * 100vw;
+  }
+  #subjects .icon {
+    .text-button {
+      font-size: (14.4px / $tinywidth) * 100vw;
+    }
+    img, svg {
+      max-width: (120px / $tinywidth) * 100vw;
+    }
   }
   .cta-content h2 {
     font-size: (55px / $tinywidth) * 100vw;
