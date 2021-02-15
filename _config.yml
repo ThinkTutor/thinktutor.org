@@ -25,7 +25,7 @@ cdn: "ajsxgydazo.cloudimg.io/v7" # CDN prefix to put in front of images
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
-logo: "/assets/images/logo.svg"
+logo: "/assets/logo.svg"
 
 social:
   email: "hello@thinktutor.org"
