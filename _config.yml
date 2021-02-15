@@ -25,6 +25,13 @@ cdn: "ajsxgydazo.cloudimg.io/v7" # CDN prefix to put in front of images
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
+social:
+  email: "hello@thinktutor.org"
+  github: "thinktutor"
+  linkedin: "thinktutor"
+  facebook: "thinktutor.org"
+  opencollective: "thinktutor"
+
 collections:
   subjects:
     output: true

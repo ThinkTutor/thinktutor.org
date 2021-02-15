@@ -71,6 +71,31 @@ p {
   text-transform: uppercase;
 }
 
+ul.social-icons {
+  padding-left: 0;
+  li {
+    display: inline-block;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0px;
+    }
+    a {
+      color: $headings-color;
+      transition: all 0.3s;
+      &:hover {
+        color: $primary-hover;
+      }
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      fill: currentColor;
+      vertical-align: text-bottom;
+    }
+  }
+}
+
 /* 
 ---------------------------------------------
 banner
@@ -220,37 +245,12 @@ about
     margin-top: 25px;
     margin-bottom: 10px;
   }
-  img,
-  svg {
+  img {
     width: 100%;
     border-radius: 5px;
   }
   p {
     margin-bottom: 20px;
-  }
-  ul.social-icons {
-    padding-left: 0;
-    li {
-      display: inline-block;
-      margin-right: 12px;
-      &:last-child {
-        margin-right: 0px;
-      }
-      a {
-        color: $headings-color;
-        transition: all 0.3s;
-        &:hover {
-          color: $primary-hover;
-        }
-      }
-      svg {
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        fill: currentColor;
-        vertical-align: text-bottom;
-      }
-    }
   }
 }
 
