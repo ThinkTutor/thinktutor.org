@@ -1,4 +1,4 @@
 assets:
   cdn:
-    destination: "/?u=https://thinktutor.org/assets"
-    url: "http://cf.jare.io"
+    destination: "/gh/thinktutor/thinktutor.github.io@gh-pages/assets"
+    url: "https://cdn.jsdelivr.net"
