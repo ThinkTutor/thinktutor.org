@@ -13,6 +13,8 @@ end
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 5.0.0.beta1'
 
+gem "mini_magick"
+
 # optimize images
 gem 'image_optim'
 gem 'image_optim_bin'

@@ -16,14 +16,17 @@ jobs:
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.6
+    - name: install ImageMagick
+      run: |
+        sudo apt install -y imagemagick
     - name: Cache dependencies
       id: cache-deps
       uses: actions/cache@v1
       with:
         path: vendor/cache
-        key: bundle-use-ruby-ubuntu-latest-jekyll-${{ hashFiles('**/Gemfile.lock') }}
+        key: bundle-use-ubuntu-latest-jekyll-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
-          bundle-use-ruby-ubuntu-latest-jekyll-
+          bundle-use-ubuntu-latest-jekyll-
     - name: Install dependencies
       run: |
         bundle install

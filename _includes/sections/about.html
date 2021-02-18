@@ -20,11 +20,16 @@
                         {%- if tutor.image_remote -%}
                         <img src="{{ tutor.image }}" alt="Picture of {{ tutor.name }}" loading="lazy">
                         {%- else -%}
-                        {%- asset '{{ tutor.image @optim }}' width=400 alt="Picture of {{ tutor.name }}" loading="lazy"
+                        {%- asset '{{ tutor.image }}' @pic
+                            srcset:max-width=960
+                            srcset:max-width=640
+                            srcset:max-width=320
+                            alt="Picture of {{ tutor.name }}" 
+                            loading="lazy"
                         -%}
                         {%- endif -%}
                         {%- else -%}
-                        {%- asset 'tutors/unknown.svg' width=400 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
+                        {%- asset 'tutors/unknown.svg' width=320 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
                         {%- endif -%}
                     </div>
                     <div class="down-content">
