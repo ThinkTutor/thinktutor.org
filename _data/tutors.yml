@@ -28,5 +28,12 @@
     João has over 6 years of teaching experience in Finance, Economics and Business for MBA students. He is currently a PhD student in Finance at Northwestern. He tutors in all courses in Economics, Finance, Business and Statistics.
   social:
     email: "joao@thinktutor.org"
-  
-
+ 
+- name: "Israel Donato Ridgley"
+  image: "tutors/israel.jpg"
+  image_remote: false
+  title: "Electrical Engineering PhD student, Northwestern University"
+  bio: >-
+    With a Bachelor's and Master's degree from MIT and experience teaching students of all ages, Israel is well suited to teach in many areas of Engineering. He tutors Introductory Programming, Machine Learning, Signals and Systems, Optimization, and other areas of Mathematics.
+  social:
+    email: "israel@thinktutor.org"
