@@ -88,8 +88,8 @@ ul.social-icons {
       }
     }
     svg {
-      width: 16px;
-      height: 16px;
+      width: 1.2em;
+      height: 1.2em;
       display: inline-block;
       fill: currentColor;
       vertical-align: text-bottom;
@@ -223,35 +223,24 @@ about
 --------------------------------------------- 
 */
 
-#about .tutor-item {
-  background-color: #fff;
+#about .card {
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  h4 {
+  h5 {
     font-size: 19px;
     font-weight: 600;
     color: $headings-color;
-    letter-spacing: 0.5px;
-    margin-bottom: 18px;
   }
   span {
     font-size: 13px;
     font-weight: 500;
     color: $info;
     display: inline-block;
-    margin-top: 25px;
     margin-bottom: 10px;
   }
   img {
     width: 100%;
-    border-radius: 5px;
-  }
-  p {
-    margin-bottom: 20px;
+    border-radius: 5px 5px 0 0;
   }
 }
 

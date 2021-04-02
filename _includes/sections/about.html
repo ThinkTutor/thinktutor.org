@@ -11,10 +11,10 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
             {%- for tutor in site.data.tutors -%}
-            <div class="col-lg-4">
-                <div class="tutor-item">
+            <div class="col">
+                <div class="card h-100">
                     <div class="image-thumb">
                         {%- if tutor.image -%}
                         {%- if tutor.image_remote -%}
@@ -32,47 +32,48 @@
                         {%- asset 'tutors/unknown.svg' width=320 alt="Picture of {{ tutor.name }}" loading="lazy" -%}
                         {%- endif -%}
                     </div>
-                    <div class="down-content">
+                    <div class="card-body">
                         <span>{{ tutor.title }}</span>
-                        <h4>{{ tutor.name }}</h4>
-                        <p>{{ tutor.bio }}</p>
-                        {%- if tutor.social -%}
-                        <ul class="social-icons">
-                            {%- if tutor.social.linkedin -%}
-                            <li><a href="{{ tutor.social.linkedin | cgi_escape | escape | prepend: 'https://www.linkedin.com/in/' }}"
-                                    title="{{ tutor.social.linkedin | escape }}" target="_blank"><svg>
-                                        <use
-                                            xlink:href="{{ '/assets/icons/minima-social-icons.svg#linkedin' | relative_url }}">
-                                        </use>
-                                    </svg></a></li>
-                            {%- endif -%}
-                            {%- if tutor.social.twitter -%}
-                            <li><a href="{{ tutor.social.twitter | cgi_escape | escape | prepend: 'https://twitter.com/' }}"
-                                    title="{{ tutor.social.twitter | escape }}" target="_blank"><svg>
-                                        <use
-                                            xlink:href="{{ '/assets/icons/minima-social-icons.svg#twitter' | relative_url }}">
-                                        </use>
-                                    </svg></a></li>
-                            {%- endif -%}
-                            {%- if tutor.social.github -%}
-                            <li><a href="{{ tutor.social.github | cgi_escape | escape | prepend: 'https://github.com/' }}"
-                                    title="{{ tutor.social.github | escape }}" target="_blank"><svg>
-                                        <use
-                                            xlink:href="{{ '/assets/icons/minima-social-icons.svg#github' | relative_url }}">
-                                        </use>
-                                    </svg></a></li>
-                            {%- endif -%}
-                            {%- if tutor.social.email -%}
-                            <li><a href="{{ tutor.social.email | cgi_escape | escape | prepend: 'mailto:' }}"
-                                    title="{{ tutor.social.email | escape }}"><svg>
-                                        <use
-                                            xlink:href="{{ '/assets/icons/minima-social-icons.svg#email' | relative_url }}">
-                                        </use>
-                                    </svg></a></li>
-                            {%- endif -%}
-                        </ul>
-                        {%- endif -%}
+                        <h5 class="card-title">{{ tutor.name }}</h5>
+                        <p class="card-text">{{ tutor.bio }}</p>
                     </div>
+                    {%- if tutor.social -%}
+                    <hr class="mb-0">
+                    <ul class="social-icons m-3">
+                        {%- if tutor.social.linkedin -%}
+                        <li><a href="{{ tutor.social.linkedin | cgi_escape | escape | prepend: 'https://www.linkedin.com/in/' }}"
+                                title="{{ tutor.social.linkedin | escape }}" target="_blank"><svg>
+                                    <use
+                                        xlink:href="{{ '/assets/icons/minima-social-icons.svg#linkedin' | relative_url }}">
+                                    </use>
+                                </svg></a></li>
+                        {%- endif -%}
+                        {%- if tutor.social.twitter -%}
+                        <li><a href="{{ tutor.social.twitter | cgi_escape | escape | prepend: 'https://twitter.com/' }}"
+                                title="{{ tutor.social.twitter | escape }}" target="_blank"><svg>
+                                    <use
+                                        xlink:href="{{ '/assets/icons/minima-social-icons.svg#twitter' | relative_url }}">
+                                    </use>
+                                </svg></a></li>
+                        {%- endif -%}
+                        {%- if tutor.social.github -%}
+                        <li><a href="{{ tutor.social.github | cgi_escape | escape | prepend: 'https://github.com/' }}"
+                                title="{{ tutor.social.github | escape }}" target="_blank"><svg>
+                                    <use
+                                        xlink:href="{{ '/assets/icons/minima-social-icons.svg#github' | relative_url }}">
+                                    </use>
+                                </svg></a></li>
+                        {%- endif -%}
+                        {%- if tutor.social.email -%}
+                        <li><a href="{{ tutor.social.email | cgi_escape | escape | prepend: 'mailto:' }}"
+                                title="{{ tutor.social.email | escape }}"><svg>
+                                    <use
+                                        xlink:href="{{ '/assets/icons/minima-social-icons.svg#email' | relative_url }}">
+                                    </use>
+                                </svg></a></li>
+                        {%- endif -%}
+                    </ul>
+                    {%- endif -%}
                 </div>
             </div>
             {%- endfor -%}
