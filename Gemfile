@@ -11,7 +11,7 @@ end
 
 # bootstrap files
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 5.0.0.beta1'
+gem 'bootstrap', '~> 5.0.0.beta2'
 
 gem "mini_magick"
 
