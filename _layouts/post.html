@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<section class="section" id="{{ page.slug }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="section-heading">
+                    <h2>{{ page.title }}</h2>
+                    {%- asset separator.svg @inline -%}
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
