@@ -23,8 +23,7 @@
                     </div>
                     <div class="col">
                         <h3 class="name">{{ subject.title }}</h3>
-                        {{ subject.content | split: '
-                        <!-- more -->' | first | markdownify }}
+                        {{ subject.content | split: '<!-- more -->' | first | markdownify }}
                     </div>
                 </div>
             </div>
