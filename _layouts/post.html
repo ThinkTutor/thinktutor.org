@@ -3,14 +3,16 @@ layout: default
 ---
 
 <section class="section" id="{{ page.slug }}">
-    <div class="container">
+    <div class="container post">
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <div class="section-heading">
                     <h2>{{ page.title }}</h2>
-                    {%- asset separator.svg @inline -%}
-                    {{ content }}
+                    <h5 id="author" class="fw-bold text-muted pt-4">
+                        By {{ page.author }}
+                    </h5>
                 </div>
+                {{ content }}
             </div>
         </div>
     </div>
