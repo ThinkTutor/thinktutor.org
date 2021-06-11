@@ -27,6 +27,8 @@ cdn: "ajsxgydazo.cloudimg.io/v7" # CDN prefix to put in front of images
 
 logo: "/assets/logo.svg"
 
+permalink: "/blog/:year/:month/:title/"
+
 social:
   email: "hello@thinktutor.org"
   github: "thinktutor"
