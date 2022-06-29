@@ -1,4 +1,0 @@
-assets:
-  cdn:
-    destination: "/gh/thinktutor/thinktutor.github.io@gh-pages/assets"
-    url: "https://cdn.jsdelivr.net"
