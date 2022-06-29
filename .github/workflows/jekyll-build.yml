@@ -31,7 +31,7 @@ jobs:
         bundle package
     - name: Build site
       run: |
-        JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config-prod.yml
+        JEKYLL_ENV=production bundle exec jekyll build --config _config.yml
         touch '_site/.nojekyll'
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
