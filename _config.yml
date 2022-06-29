@@ -66,10 +66,6 @@ compress_html:
   endings: all
   startings: all
 
-assets:
-  cdn:
-    destination: "/assets"
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

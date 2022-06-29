@@ -1,17 +1,17 @@
 source "https://rubygems.org"
 
-gem 'jekyll', '~> 3.9'
+gem 'jekyll', '~> 4.2.2'
 gem 'kramdown-parser-gfm'
 
 group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
-  gem 'jekyll-assets', github: 'thinktutor/jekyll-assets'
+  gem 'jekyll-assets', github: 'envygeeks/jekyll-assets'
 end
 
 # bootstrap files
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 5.0.0.beta2'
+gem 'bootstrap', '~> 5.1.3'
 
 gem "mini_magick"
 
@@ -21,7 +21,7 @@ gem 'image_optim_bin'
 gem "image_optim_pack"
 
 # new version of sprockets has issues
-gem "sprockets"
+gem "sprockets", "~> 4.0"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
