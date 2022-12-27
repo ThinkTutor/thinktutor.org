@@ -36,6 +36,9 @@
                         <span>{{ tutor.title }}</span>
                         <h5 class="card-title">{{ tutor.name }}</h5>
                         <p class="card-text">{{ tutor.bio }}</p>
+                        {%- if tutor.url %}
+                        <a class="stretched-link" href="{{ tutor.url }}"></a>
+                        {%- endif %}
                     </div>
                     {%- if tutor.social -%}
                     <hr class="mb-0">
