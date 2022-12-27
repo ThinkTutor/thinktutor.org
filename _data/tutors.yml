@@ -14,7 +14,7 @@
   image_remote: false
   title: "Economics PhD Student, Northwestern University"
   bio: >-
-    Formerly a Math/Econ major at Williams college and now an Economics PhD student at Northwestern University, Matthew's quantitative skills and passion for teaching are unparalleled. He tutors in almost all areas of Economics, Mathematics, Statistics and Programming.
+    Formerly a Math/Econ major at Williams College and now an Economics PhD student at Northwestern University, Matthew's quantitative skills and passion for teaching are unparalleled. He tutors in almost all areas of Economics, Mathematics, Statistics and Programming.
   social:
     linkedin: "mattwthomas"
     github: "mwt"
@@ -37,3 +37,12 @@
     With a Bachelor's and Master's degree from MIT and experience teaching students of all ages, Israel is well suited to teach in many areas of Engineering. He tutors Introductory Programming, Machine Learning, Signals and Systems, Optimization, and other areas of Mathematics.
   social:
     email: "israel@thinktutor.org"
+
+- name: "Chris Thomas"
+  image: "tutors/chris.jpg"
+  image_remote: false
+  title: "Math Teacher, The Churchill School and Center"
+  bio: >-
+    With years of teaching experience and a BA from Williams College, Chris is highly qualified to tutor Math, English, and Economics.
+  social:
+    email: "chris@thinktutor.org"
