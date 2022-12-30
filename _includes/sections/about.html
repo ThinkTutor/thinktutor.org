@@ -34,18 +34,15 @@
                     </div>
                     <div class="card-body">
                         <span>{{ tutor.title }}</span>
-                        {%- if tutor.url %}
-                        <a href="{{ tutor.url }}">
-                        {% endif -%}
-                            <h5 class="card-title">{{ tutor.name }}</h5>
-                        {%- if tutor.url %}
-                        </a>
-                        {%- endif %}
+                        <h5 class="card-title">{{ tutor.name }}</h5>
                         <p class="card-text">{{ tutor.bio }}</p>
+                        {%- if tutor.url %}
+                        <a class="stretched-link" href="{{ tutor.url }}"></a>
+                        {% endif -%}
                     </div>
                     {%- if tutor.social -%}
                     <hr class="mb-0">
-                    <ul class="social-icons m-3">
+                    <ul class="social-icons m-0 p-3">
                         {%- if tutor.social.linkedin -%}
                         <li><a href="{{ tutor.social.linkedin | cgi_escape | escape | prepend: 'https://www.linkedin.com/in/' }}"
                                 title="{{ tutor.social.linkedin | escape }}" target="_blank"><svg>
