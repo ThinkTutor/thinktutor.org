@@ -33,7 +33,7 @@ jobs:
       with:
         ruby-version: 2.6
         bundler-cache: true
-    - name: install ImageMagick
+    - name: Install ImageMagick
       run: |
         sudo apt install -y imagemagick
     - name: Setup Pages
