@@ -49,10 +49,7 @@ topic which you are passionate to write about.
 
 7.  Write from a unique perspective and try to avoid writing how people
     normally would. It should be based upon genuine emotion and
-    authentic experiences.
-
-Open your essay strong so that it is exciting and so an admissions
-officer can be intrigued.
+    authentic experiences. Open your essay strong so that it is exciting and so an admissions officer can be intrigued.
 
 8.  Start writing your essay as early as possible so you can have
     multiple drafts and really have time to think through how you want

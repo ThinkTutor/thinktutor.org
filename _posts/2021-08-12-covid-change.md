@@ -4,10 +4,13 @@ author: "Ananya Aggarwal"
 layout: "post"
 ---
 
-The pandemic has obviously affected everyone's day to day lives and activities, but particularly the educational system has been adapted to accommodate online learning. The sudden shift to remote instruction has reinforced the idea that developing high quality online teaching and learning takes time, effort, and planning, which some may argue the pandemic [did not allow for](https://www.educationnext.org/covid-19-boost-online-learning-may-backfire/). The real question to ask is how has COVID potentially changed the educational system in the United States for the long term?
+The pandemic has obviously affected everyone's day to day lives and activities, but particularly the educational system has been adapted to accommodate online learning. The real question to ask is how has COVID potentially changed the educational system in the United States for the long term?
 <!-- more -->
 
-## Increased use of online tools
+The sudden shift to remote instruction has reinforced the idea that developing high quality online teaching and learning takes time, effort, and planning, which some may argue the pandemic [did not allow for](https://www.educationnext.org/covid-19-boost-online-learning-may-backfire/). 
+
+
+### 1. Increased use of online tools
 
 Many more students across the country may have laptops and internet
 access, so there may be an increased use of online tools. Now that
@@ -21,7 +24,8 @@ the main concerns with this supposed positive tool can be that these
 online tools become a replacement to in-person instruction as well as
 the digital divide between [schools and communities](https://www.brookings.edu/blog/techtank/2020/03/17/what-the-coronavirus-reveals-about-the-digital-divide-between-schools-and-communities/).
 
-## Risk of disadvantaged and vulnerable children of dropping out as well as many more challenges
+
+### 2. Risk of disadvantaged and vulnerable children of dropping out as well as many more challenges
 
 If these online tools do become more normalized there will be
 disproportionate effects for kids with disadvantaged backgrounds vs the
@@ -36,15 +40,16 @@ learning has shown that there must be adequate support to these
 disadvantaged children who are the least equipped and at risk of
 becoming disengaged with [content and dropping out](https://www.epi.org/publication/the-consequences-of-the-covid-19-pandemic-for-education-performance-and-equity-in-the-united-states-what-can-we-learn-from-pre-pandemic-research-to-inform-relief-recovery-and-rebuilding/).
 
-## Removal of standardized tests such as the ACT or SAT
+
+### 3. Removal of standardized tests such as the ACT or SAT
 
 The pandemic also illustrated the limitations of standardized tests,
 which can reward affluent students who have access to better specialized
 instruction that only demonstrate a small set of skills. Many colleges
 around the country have made sending ACT/SAT scores optional.
 
-Investing in the future of children with lost learning and teachers devoting their time to them
-===============================================================================================
+
+### 4. Investing in the future of children with lost learning and teachers devoting their time to them
 
 Many schools and colleges around the country must help students with
 their lost
@@ -67,7 +72,8 @@ order to come back from this.
 The educational system has fallen backwards, but Biden argues that the
 rescue package will help [move it forwards](https://www.edweek.org/policy-politics/see-what-the-huge-covid-19-aid-deal-biden-has-signed-means-for-education-in-two-charts/2021/03).
 
-## Hardships in the classroom including attention and focus
+
+### 5. Hardships in the classroom including attention and focus
 
 [Kids across the country](https://www.unicef.org/georgia/stories/how-covid-19-changed-lives-voices-children) agree that the pandemic led to their daily lives and activities to be
 radically changed, and with this change comes the fear that they won't
@@ -81,7 +87,8 @@ about their academic performance. Clearly, students returning to
 in-person college classes may need extra time adjusting and help in
 certain concepts.
 
-## Active steps to support the well-being of students in order to succeed academically
+
+### 6. Active steps to support the well-being of students in order to succeed academically
 
 There have also been multiple
 [studies](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245327)
