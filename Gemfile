@@ -2,18 +2,18 @@ source 'https://rubygems.org'
 
 ruby '~> 2.6'
 
-gem 'jekyll', '~> 4.3.1'
+gem 'jekyll', '~> 4.3'
 gem 'kramdown-parser-gfm'
 
 group :jekyll_plugins do
   gem 'jekyll-seo-tag'
   gem 'jekyll-sitemap'
-  gem 'jekyll-assets', github: 'envygeeks/jekyll-assets'
+  gem 'jekyll-assets', git: 'https://github.com/circleci/jekyll-assets.git'
 end
 
 # bootstrap files
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 5.2.3'
+gem 'bootstrap', '~> 5.3'
 
 gem 'mini_magick'
 
