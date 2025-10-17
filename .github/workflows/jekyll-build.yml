@@ -27,7 +27,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v5
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -38,7 +38,7 @@ jobs:
         sudo apt install -y imagemagick
     - name: Setup Pages
       id: pages
-      uses: actions/configure-pages@v2
+      uses: actions/configure-pages@v5
     - name: Build with Jekyll
       # Outputs to the './_site' directory by default
       run: JEKYLL_ENV=production bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -46,7 +46,7 @@ jobs:
         JEKYLL_ENV: production
     - name: Upload artifact
       # Automatically uploads an artifact from the './_site' directory by default
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v4
 
   # Deployment job
   deploy:
@@ -58,5 +58,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
 
